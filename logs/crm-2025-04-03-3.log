@@ -1,0 +1,143 @@
+2025-04-03T10:36:42.171+05:30  INFO 12504 --- [crm-system] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-03T10:36:44.195+05:30  INFO 12504 --- [crm-system] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailServiceImpl
+2025-04-03T10:36:44.482+05:30 DEBUG 12504 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 15 mappings in 'requestMappingHandlerMapping'
+2025-04-03T10:36:44.749+05:30 DEBUG 12504 --- [crm-system] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-04-03T10:36:44.853+05:30 DEBUG 12504 --- [crm-system] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-04-03T10:36:45.008+05:30 DEBUG 12504 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-04-03T10:36:45.087+05:30 DEBUG 12504 --- [crm-system] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-04-03T10:36:45.391+05:30  INFO 12504 --- [crm-system] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8095 (http) with context path '/'
+2025-04-03T10:36:45.408+05:30  INFO 12504 --- [crm-system] [main] com.demo.crm.CrmSystemApplication        : Started CrmSystemApplication in 11.92 seconds (process running for 13.121)
+2025-04-03T10:37:26.187+05:30  INFO 12504 --- [crm-system] [http-nio-8095-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-03T10:37:26.187+05:30  INFO 12504 --- [crm-system] [http-nio-8095-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-03T10:37:26.187+05:30 DEBUG 12504 --- [crm-system] [http-nio-8095-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-04-03T10:37:26.187+05:30 DEBUG 12504 --- [crm-system] [http-nio-8095-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-04-03T10:37:26.187+05:30 DEBUG 12504 --- [crm-system] [http-nio-8095-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-04-03T10:37:26.187+05:30 DEBUG 12504 --- [crm-system] [http-nio-8095-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@24b9c037
+2025-04-03T10:37:26.187+05:30 DEBUG 12504 --- [crm-system] [http-nio-8095-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@286b48ce
+2025-04-03T10:37:26.187+05:30 DEBUG 12504 --- [crm-system] [http-nio-8095-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-04-03T10:37:26.187+05:30  INFO 12504 --- [crm-system] [http-nio-8095-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-04-03T10:37:26.221+05:30 DEBUG 12504 --- [crm-system] [http-nio-8095-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /sales
+2025-04-03T10:37:26.439+05:30 DEBUG 12504 --- [crm-system] [http-nio-8095-exec-1] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2025-04-03T10:37:26.522+05:30 DEBUG 12504 --- [crm-system] [http-nio-8095-exec-1] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        user_role r1_0 
+    join
+        role r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+2025-04-03T10:37:26.545+05:30 DEBUG 12504 --- [crm-system] [http-nio-8095-exec-1] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-04-03T10:37:26.545+05:30 DEBUG 12504 --- [crm-system] [http-nio-8095-exec-1] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2025-04-03T10:37:26.553+05:30 DEBUG 12504 --- [crm-system] [http-nio-8095-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /sales
+2025-04-03T10:37:26.562+05:30 DEBUG 12504 --- [crm-system] [http-nio-8095-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/sales", parameters={}
+2025-04-03T10:37:26.562+05:30 DEBUG 12504 --- [crm-system] [http-nio-8095-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.SaleController#getAllSales()
+2025-04-03T10:37:26.586+05:30  INFO 12504 --- [crm-system] [http-nio-8095-exec-1] com.demo.crm.controller.SaleController   : Fetching all sales
+2025-04-03T10:37:26.594+05:30  INFO 12504 --- [crm-system] [http-nio-8095-exec-1] com.demo.crm.service.SaleService         : Fetching all sales records
+2025-04-03T10:37:26.618+05:30 DEBUG 12504 --- [crm-system] [http-nio-8095-exec-1] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.amount,
+        s1_0.customer_id,
+        s1_0.date,
+        s1_0.product 
+    from
+        sale s1_0
+2025-04-03T10:37:26.643+05:30 DEBUG 12504 --- [crm-system] [http-nio-8095-exec-1] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.address,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customer c1_0 
+    where
+        c1_0.id=?
+2025-04-03T10:37:26.651+05:30 DEBUG 12504 --- [crm-system] [http-nio-8095-exec-1] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.address,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customer c1_0 
+    where
+        c1_0.id=?
+2025-04-03T10:37:26.695+05:30 DEBUG 12504 --- [crm-system] [http-nio-8095-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-03T10:37:26.702+05:30 DEBUG 12504 --- [crm-system] [http-nio-8095-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [[com.demo.crm.model.Sale@9f7760b, com.demo.crm.model.Sale@432f3037, com.demo.crm.model.Sale@6f6c2fc4 (truncated)...]
+2025-04-03T10:37:26.808+05:30 DEBUG 12504 --- [crm-system] [http-nio-8095-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-04-03T10:38:37.219+05:30 DEBUG 12504 --- [crm-system] [http-nio-8095-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /sales
+2025-04-03T10:38:37.227+05:30 DEBUG 12504 --- [crm-system] [http-nio-8095-exec-4] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2025-04-03T10:38:37.227+05:30 DEBUG 12504 --- [crm-system] [http-nio-8095-exec-4] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        user_role r1_0 
+    join
+        role r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+2025-04-03T10:38:37.235+05:30 DEBUG 12504 --- [crm-system] [http-nio-8095-exec-4] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-04-03T10:38:37.235+05:30 DEBUG 12504 --- [crm-system] [http-nio-8095-exec-4] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2025-04-03T10:38:37.235+05:30 DEBUG 12504 --- [crm-system] [http-nio-8095-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /sales
+2025-04-03T10:38:37.235+05:30 DEBUG 12504 --- [crm-system] [http-nio-8095-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/sales", parameters={}
+2025-04-03T10:38:37.235+05:30 DEBUG 12504 --- [crm-system] [http-nio-8095-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.SaleController#getAllSales()
+2025-04-03T10:38:37.235+05:30  INFO 12504 --- [crm-system] [http-nio-8095-exec-4] com.demo.crm.controller.SaleController   : Fetching all sales
+2025-04-03T10:38:37.235+05:30  INFO 12504 --- [crm-system] [http-nio-8095-exec-4] com.demo.crm.service.SaleService         : Fetching all sales records
+2025-04-03T10:38:37.244+05:30 DEBUG 12504 --- [crm-system] [http-nio-8095-exec-4] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.amount,
+        s1_0.customer_id,
+        s1_0.date,
+        s1_0.product 
+    from
+        sale s1_0
+2025-04-03T10:38:37.251+05:30 DEBUG 12504 --- [crm-system] [http-nio-8095-exec-4] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.address,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customer c1_0 
+    where
+        c1_0.id=?
+2025-04-03T10:38:37.251+05:30 DEBUG 12504 --- [crm-system] [http-nio-8095-exec-4] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.address,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customer c1_0 
+    where
+        c1_0.id=?

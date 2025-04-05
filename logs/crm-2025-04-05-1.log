@@ -1,0 +1,62 @@
+2025-04-05T11:03:26.490+05:30 DEBUG 16872 --- [crm-system] [http-nio-8095-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-04-05T11:04:57.900+05:30  INFO 16872 --- [crm-system] [RMI TCP Connection(5)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-04-05T11:04:57.903+05:30  INFO 16872 --- [crm-system] [RMI TCP Connection(5)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-05T11:04:57.911+05:30  INFO 16872 --- [crm-system] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-05T11:04:57.920+05:30  INFO 16872 --- [crm-system] [RMI TCP Connection(5)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05T11:04:57.920+05:30  INFO 16872 --- [crm-system] [RMI TCP Connection(5)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-05T11:04:57.945+05:30  INFO 16872 --- [crm-system] [RMI TCP Connection(5)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-05T11:27:01.511+05:30  INFO 7636 --- [crm-system] [main] c.d.c.controller.CustomerControllerTest  : Starting CustomerControllerTest using Java 23.0.2 with PID 7636 (started by Sivanesh.C in C:\Users\Sivanesh.C\eclipse-workspace\crm-system)
+2025-04-05T11:27:01.514+05:30 DEBUG 7636 --- [crm-system] [main] c.d.c.controller.CustomerControllerTest  : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-05T11:27:01.515+05:30  INFO 7636 --- [crm-system] [main] c.d.c.controller.CustomerControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2025-04-05T11:27:01.575+05:30 DEBUG 7636 --- [crm-system] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@42561fba
+2025-04-05T11:27:05.501+05:30 DEBUG 7636 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2025-04-05T11:27:05.870+05:30 DEBUG 7636 --- [crm-system] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-04-05T11:27:05.996+05:30 DEBUG 7636 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-04-05T11:27:06.177+05:30 DEBUG 7636 --- [crm-system] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-04-05T11:27:06.322+05:30  WARN 7636 --- [crm-system] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 42763381-7196-4f17-b1aa-b3fb3e5cffc5
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-04-05T11:27:06.413+05:30  INFO 7636 --- [crm-system] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-04-05T11:27:06.804+05:30 DEBUG 7636 --- [crm-system] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-04-05T11:27:06.951+05:30  INFO 7636 --- [crm-system] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-04-05T11:27:06.952+05:30  INFO 7636 --- [crm-system] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-04-05T11:27:06.957+05:30  INFO 7636 --- [crm-system] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+2025-04-05T11:27:07.058+05:30  INFO 7636 --- [crm-system] [main] c.d.c.controller.CustomerControllerTest  : Started CustomerControllerTest in 6.487 seconds (process running for 8.817)
+2025-04-05T11:27:07.294+05:30 DEBUG 7636 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.CustomerController#addCustomer(Customer)
+2025-04-05T11:27:07.441+05:30 DEBUG 7636 --- [crm-system] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json" to [com.demo.crm.model.Customer@29519337]
+2025-04-05T11:27:07.454+05:30  INFO 7636 --- [crm-system] [main] c.d.crm.controller.CustomerController    : Adding new customer: Alice - Address: hello
+2025-04-05T11:27:07.496+05:30 DEBUG 7636 --- [crm-system] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-05T11:27:07.499+05:30 DEBUG 7636 --- [crm-system] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.demo.crm.model.Customer@20f63ddc]
+2025-04-05T11:27:07.537+05:30 DEBUG 7636 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.CustomerController#getAllCustomers()
+2025-04-05T11:27:07.538+05:30  INFO 7636 --- [crm-system] [main] c.d.crm.controller.CustomerController    : Fetching all customers
+2025-04-05T11:27:07.548+05:30 DEBUG 7636 --- [crm-system] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-05T11:27:07.549+05:30 DEBUG 7636 --- [crm-system] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.demo.crm.model.Customer@1115be8c, com.demo.crm.model.Customer@64ed18ec]]
+2025-04-05T11:27:07.663+05:30 DEBUG 7636 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.CustomerController#deleteCustomer(Long)
+2025-04-05T11:27:07.670+05:30  INFO 7636 --- [crm-system] [main] c.d.crm.controller.CustomerController    : Deleting customer with ID: 1
+2025-04-05T11:27:07.674+05:30 DEBUG 7636 --- [crm-system] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2025-04-05T11:27:07.676+05:30 DEBUG 7636 --- [crm-system] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Customer deleted successfully!"]
+2025-04-05T11:27:07.708+05:30 DEBUG 7636 --- [crm-system] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@42561fba, started on Sat Apr 05 11:27:01 IST 2025
+2025-04-05T11:28:17.916+05:30  INFO 2644 --- [crm-system] [main] c.d.c.controller.CustomerControllerTest  : Starting CustomerControllerTest using Java 23.0.2 with PID 2644 (started by Sivanesh.C in C:\Users\Sivanesh.C\eclipse-workspace\crm-system)
+2025-04-05T11:28:17.917+05:30 DEBUG 2644 --- [crm-system] [main] c.d.c.controller.CustomerControllerTest  : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-05T11:28:17.918+05:30  INFO 2644 --- [crm-system] [main] c.d.c.controller.CustomerControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2025-04-05T11:28:17.946+05:30 DEBUG 2644 --- [crm-system] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@42561fba
+2025-04-05T11:28:21.705+05:30 DEBUG 2644 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2025-04-05T11:28:22.078+05:30 DEBUG 2644 --- [crm-system] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-04-05T11:28:22.203+05:30 DEBUG 2644 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-04-05T11:28:22.396+05:30 DEBUG 2644 --- [crm-system] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-04-05T11:28:22.624+05:30  WARN 2644 --- [crm-system] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: a1d5a97f-f54f-46e9-aa57-ca1a020b1297
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-04-05T11:28:22.705+05:30  INFO 2644 --- [crm-system] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-04-05T11:28:22.988+05:30 DEBUG 2644 --- [crm-system] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-04-05T11:28:23.121+05:30  INFO 2644 --- [crm-system] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-04-05T11:28:23.121+05:30  INFO 2644 --- [crm-system] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-04-05T11:28:23.123+05:30  INFO 2644 --- [crm-system] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2025-04-05T11:28:23.229+05:30  INFO 2644 --- [crm-system] [main] c.d.c.controller.CustomerControllerTest  : Started CustomerControllerTest in 5.885 seconds (process running for 7.454)
+2025-04-05T11:28:23.488+05:30 DEBUG 2644 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.CustomerController#addCustomer(Customer)

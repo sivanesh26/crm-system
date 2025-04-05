@@ -1,0 +1,59 @@
+2025-04-04T18:36:30.305+05:30 DEBUG 15184 --- [crm-system] [http-nio-8095-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /interactions
+2025-04-04T18:36:30.312+05:30 DEBUG 15184 --- [crm-system] [http-nio-8095-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/interactions", parameters={}
+2025-04-04T18:36:30.316+05:30 DEBUG 15184 --- [crm-system] [http-nio-8095-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.InteractionController#addInteraction(Interaction)
+2025-04-04T18:36:30.436+05:30 DEBUG 15184 --- [crm-system] [http-nio-8095-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.demo.crm.model.Interaction@4df56a56]
+2025-04-04T18:36:30.448+05:30  INFO 15184 --- [crm-system] [http-nio-8095-exec-2] c.d.c.controller.InteractionController   : Adding new interaction for customer ID: com.demo.crm.model.Customer@c9310a6
+2025-04-04T18:36:30.450+05:30  INFO 15184 --- [crm-system] [http-nio-8095-exec-2] c.demo.crm.service.InteractionService    : Saving new interaction for customer ID: com.demo.crm.model.Customer@c9310a6
+2025-04-04T18:36:30.493+05:30 DEBUG 15184 --- [crm-system] [http-nio-8095-exec-2] org.hibernate.SQL                        : 
+    insert 
+    into
+        interactions
+        (customer_id, date, details, interaction_type) 
+    values
+        (?, ?, ?, ?)
+2025-04-04T18:36:30.532+05:30  INFO 15184 --- [crm-system] [http-nio-8095-exec-2] c.demo.crm.service.InteractionService    : Interaction saved successfully with ID: 1
+2025-04-04T18:36:30.532+05:30  INFO 15184 --- [crm-system] [http-nio-8095-exec-2] c.d.c.controller.InteractionController   : Interaction added successfully with ID: 1
+2025-04-04T18:36:30.559+05:30 DEBUG 15184 --- [crm-system] [http-nio-8095-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-04T18:36:30.561+05:30 DEBUG 15184 --- [crm-system] [http-nio-8095-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.demo.crm.model.Interaction@4df56a56]
+2025-04-04T18:36:30.588+05:30 DEBUG 15184 --- [crm-system] [http-nio-8095-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-04-04T18:36:39.761+05:30  INFO 15184 --- [crm-system] [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-04-04T18:36:39.768+05:30  INFO 15184 --- [crm-system] [RMI TCP Connection(2)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-04T18:36:39.775+05:30  INFO 15184 --- [crm-system] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-04T18:36:39.787+05:30  INFO 15184 --- [crm-system] [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-04T18:36:39.792+05:30  INFO 15184 --- [crm-system] [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-04T18:36:39.807+05:30  INFO 15184 --- [crm-system] [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-04T18:41:37.361+05:30  INFO 11684 --- [crm-system] [main] c.d.c.controller.CustomerControllerTest  : Starting CustomerControllerTest using Java 23.0.2 with PID 11684 (started by Sivanesh.C in C:\Users\Sivanesh.C\eclipse-workspace\crm-system)
+2025-04-04T18:41:37.365+05:30 DEBUG 11684 --- [crm-system] [main] c.d.c.controller.CustomerControllerTest  : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-04T18:41:37.367+05:30  INFO 11684 --- [crm-system] [main] c.d.c.controller.CustomerControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2025-04-04T18:41:37.449+05:30 DEBUG 11684 --- [crm-system] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@42561fba
+2025-04-04T18:41:41.826+05:30 DEBUG 11684 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2025-04-04T18:41:42.213+05:30 DEBUG 11684 --- [crm-system] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-04-04T18:41:42.290+05:30 DEBUG 11684 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-04-04T18:41:42.400+05:30 DEBUG 11684 --- [crm-system] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-04-04T18:41:42.527+05:30  WARN 11684 --- [crm-system] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 2126efe4-3ea2-46e6-bcfa-18fb2aa71a8d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-04-04T18:41:42.614+05:30  INFO 11684 --- [crm-system] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-04-04T18:41:42.967+05:30 DEBUG 11684 --- [crm-system] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-04-04T18:41:43.226+05:30  INFO 11684 --- [crm-system] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-04-04T18:41:43.227+05:30  INFO 11684 --- [crm-system] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-04-04T18:41:43.231+05:30  INFO 11684 --- [crm-system] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+2025-04-04T18:41:43.380+05:30  INFO 11684 --- [crm-system] [main] c.d.c.controller.CustomerControllerTest  : Started CustomerControllerTest in 6.948 seconds (process running for 8.565)
+2025-04-04T18:41:43.640+05:30 DEBUG 11684 --- [crm-system] [main] o.s.security.web.FilterChainProxy        : Securing GET /customers/1
+2025-04-04T18:41:43.657+05:30 DEBUG 11684 --- [crm-system] [main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-04T18:41:43.666+05:30 DEBUG 11684 --- [crm-system] [main] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost/customers/1?continue to session
+2025-04-04T18:41:43.679+05:30 DEBUG 11684 --- [crm-system] [main] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using And [Not [RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@1785d194, matchingMediaTypes=[application/xhtml+xml, image/*, text/html, text/plain], useEquals=false, ignoredMediaTypes=[*/*]]]
+2025-04-04T18:41:43.681+05:30 DEBUG 11684 --- [crm-system] [main] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using Or [RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest], And [Not [MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@1785d194, matchingMediaTypes=[text/html], useEquals=false, ignoredMediaTypes=[]]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@1785d194, matchingMediaTypes=[application/atom+xml, application/x-www-form-urlencoded, application/json, application/octet-stream, application/xml, multipart/form-data, text/xml], useEquals=false, ignoredMediaTypes=[*/*]]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@1785d194, matchingMediaTypes=[*/*], useEquals=true, ignoredMediaTypes=[]]]
+2025-04-04T18:41:43.682+05:30 DEBUG 11684 --- [crm-system] [main] s.w.a.DelegatingAuthenticationEntryPoint : Match found! Executing org.springframework.security.web.authentication.DelegatingAuthenticationEntryPoint@165d1d54
+2025-04-04T18:41:43.683+05:30 DEBUG 11684 --- [crm-system] [main] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2025-04-04T18:41:43.684+05:30 DEBUG 11684 --- [crm-system] [main] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@4fee14b
+2025-04-04T18:41:43.910+05:30 DEBUG 11684 --- [crm-system] [main] o.s.security.web.FilterChainProxy        : Securing POST /customers
+2025-04-04T18:41:43.912+05:30 DEBUG 11684 --- [crm-system] [main] o.s.security.web.csrf.CsrfFilter         : Invalid CSRF token found for http://localhost/customers
+2025-04-04T18:41:43.913+05:30 DEBUG 11684 --- [crm-system] [main] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2025-04-04T18:41:43.931+05:30 DEBUG 11684 --- [crm-system] [main] o.s.security.web.FilterChainProxy        : Securing GET /customers
+2025-04-04T18:41:43.931+05:30 DEBUG 11684 --- [crm-system] [main] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-04T18:41:43.932+05:30 DEBUG 11684 --- [crm-system] [main] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost/customers?continue to session
+2025-04-04T18:41:43.932+05:30 DEBUG 11684 --- [crm-system] [main] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using And [Not [RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@1785d194, matchingMediaTypes=[application/xhtml+xml, image/*, text/html, text/plain], useEquals=false, ignoredMediaTypes=[*/*]]]

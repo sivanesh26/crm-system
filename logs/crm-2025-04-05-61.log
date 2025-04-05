@@ -1,0 +1,76 @@
+2025-04-05T15:55:10.895+05:30  INFO 5300 --- [crm-system] [http-nio-8095-exec-7] c.d.c.controller.InteractionController   : Adding new interaction for customer ID: com.demo.crm.model.Customer@2d2a9d72
+2025-04-05T15:55:10.899+05:30  INFO 5300 --- [crm-system] [http-nio-8095-exec-7] c.demo.crm.service.InteractionService    : Saving new interaction for customer ID: com.demo.crm.model.Customer@2d2a9d72
+2025-04-05T15:55:10.902+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] org.hibernate.SQL                        : 
+    insert 
+    into
+        interactions
+        (customer_id, date, details, interaction_type) 
+    values
+        (?, ?, ?, ?)
+2025-04-05T15:55:10.918+05:30  INFO 5300 --- [crm-system] [http-nio-8095-exec-7] c.demo.crm.service.InteractionService    : Interaction saved successfully with ID: 9
+2025-04-05T15:55:10.919+05:30  INFO 5300 --- [crm-system] [http-nio-8095-exec-7] c.d.c.controller.InteractionController   : Interaction added successfully with ID: 9
+2025-04-05T15:55:10.920+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-05T15:55:10.920+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.demo.crm.model.Interaction@58da567c]
+2025-04-05T15:55:10.921+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-04-05T15:56:20.517+05:30  INFO 5300 --- [crm-system] [RMI TCP Connection(78)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-04-05T15:56:20.547+05:30  INFO 5300 --- [crm-system] [RMI TCP Connection(78)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-05T15:56:20.555+05:30  INFO 5300 --- [crm-system] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-05T15:56:20.565+05:30  INFO 5300 --- [crm-system] [RMI TCP Connection(78)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05T15:56:20.575+05:30  INFO 5300 --- [crm-system] [RMI TCP Connection(78)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-05T15:56:20.584+05:30  INFO 5300 --- [crm-system] [RMI TCP Connection(78)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-05T15:56:22.582+05:30  INFO 7528 --- [crm-system] [main] com.demo.crm.CrmSystemApplication        : Starting CrmSystemApplication using Java 23.0.2 with PID 7528 (C:\Users\Sivanesh.C\eclipse-workspace\crm-system\target\classes started by Sivanesh.C in C:\Users\Sivanesh.C\eclipse-workspace\crm-system)
+2025-04-05T15:56:22.584+05:30 DEBUG 7528 --- [crm-system] [main] com.demo.crm.CrmSystemApplication        : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-05T15:56:22.585+05:30  INFO 7528 --- [crm-system] [main] com.demo.crm.CrmSystemApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-04-05T15:56:23.203+05:30  INFO 7528 --- [crm-system] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-05T15:56:23.264+05:30  INFO 7528 --- [crm-system] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 4 JPA repository interfaces.
+2025-04-05T15:56:23.784+05:30  INFO 7528 --- [crm-system] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8095 (http)
+2025-04-05T15:56:23.804+05:30  INFO 7528 --- [crm-system] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-05T15:56:23.805+05:30  INFO 7528 --- [crm-system] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-05T15:56:23.852+05:30  INFO 7528 --- [crm-system] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-05T15:56:23.853+05:30  INFO 7528 --- [crm-system] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1216 ms
+2025-04-05T15:56:24.005+05:30  INFO 7528 --- [crm-system] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-05T15:56:24.082+05:30  INFO 7528 --- [crm-system] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-04-05T15:56:24.123+05:30  INFO 7528 --- [crm-system] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-05T15:56:24.379+05:30  INFO 7528 --- [crm-system] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-05T15:56:24.401+05:30  INFO 7528 --- [crm-system] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-05T15:56:24.766+05:30  INFO 7528 --- [crm-system] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@58ebee9
+2025-04-05T15:56:24.769+05:30  INFO 7528 --- [crm-system] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-05T15:56:24.858+05:30  INFO 7528 --- [crm-system] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-05T15:56:25.770+05:30  INFO 7528 --- [crm-system] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-05T15:56:25.870+05:30  INFO 7528 --- [crm-system] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05T15:56:26.162+05:30  INFO 7528 --- [crm-system] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-05T15:56:27.041+05:30  INFO 7528 --- [crm-system] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailServiceImpl
+2025-04-05T15:56:27.159+05:30 DEBUG 7528 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
+2025-04-05T15:56:27.244+05:30 DEBUG 7528 --- [crm-system] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-04-05T15:56:27.298+05:30 DEBUG 7528 --- [crm-system] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-04-05T15:56:27.367+05:30 DEBUG 7528 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-04-05T15:56:27.413+05:30 DEBUG 7528 --- [crm-system] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-04-05T15:56:27.527+05:30  INFO 7528 --- [crm-system] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8095 (http) with context path '/'
+2025-04-05T15:56:27.533+05:30  INFO 7528 --- [crm-system] [main] com.demo.crm.CrmSystemApplication        : Started CrmSystemApplication in 5.383 seconds (process running for 5.958)
+2025-04-05T15:56:31.769+05:30  INFO 7528 --- [crm-system] [http-nio-8095-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-05T15:56:31.769+05:30  INFO 7528 --- [crm-system] [http-nio-8095-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-05T15:56:31.770+05:30 DEBUG 7528 --- [crm-system] [http-nio-8095-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-04-05T15:56:31.770+05:30 DEBUG 7528 --- [crm-system] [http-nio-8095-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-04-05T15:56:31.770+05:30 DEBUG 7528 --- [crm-system] [http-nio-8095-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-04-05T15:56:31.771+05:30 DEBUG 7528 --- [crm-system] [http-nio-8095-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1aacde34
+2025-04-05T15:56:31.771+05:30 DEBUG 7528 --- [crm-system] [http-nio-8095-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@419df81e
+2025-04-05T15:56:31.772+05:30 DEBUG 7528 --- [crm-system] [http-nio-8095-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-04-05T15:56:31.772+05:30  INFO 7528 --- [crm-system] [http-nio-8095-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-04-05T15:56:31.795+05:30 DEBUG 7528 --- [crm-system] [http-nio-8095-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /interactions
+2025-04-05T15:56:31.882+05:30 DEBUG 7528 --- [crm-system] [http-nio-8095-exec-1] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    from
+        user u1_0 
+    where
+        u1_0.email=?

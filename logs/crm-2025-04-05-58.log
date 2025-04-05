@@ -1,0 +1,155 @@
+2025-04-05T14:37:33.287+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-6] o.s.security.web.FilterChainProxy        : Secured DELETE /interactions/3
+2025-04-05T14:37:33.289+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-6] o.s.web.servlet.DispatcherServlet        : DELETE "/interactions/3", parameters={}
+2025-04-05T14:37:33.289+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.InteractionController#deleteInteraction(Long)
+2025-04-05T14:37:33.289+05:30  WARN 5300 --- [crm-system] [http-nio-8095-exec-6] c.d.c.controller.InteractionController   : Deleting interaction with ID: 3
+2025-04-05T14:37:33.289+05:30  WARN 5300 --- [crm-system] [http-nio-8095-exec-6] c.demo.crm.service.InteractionService    : Deleting interaction with ID: 3
+2025-04-05T14:37:33.292+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-6] org.hibernate.SQL                        : 
+    select
+        i1_0.id,
+        i1_0.customer_id,
+        c1_0.id,
+        c1_0.address,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone,
+        i1_0.date,
+        i1_0.details,
+        i1_0.interaction_type 
+    from
+        interactions i1_0 
+    join
+        customer c1_0 
+            on c1_0.id=i1_0.customer_id 
+    where
+        i1_0.id=?
+2025-04-05T14:37:33.292+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-6] org.hibernate.SQL                        : 
+    delete 
+    from
+        interactions 
+    where
+        id=?
+2025-04-05T14:37:33.301+05:30  INFO 5300 --- [crm-system] [http-nio-8095-exec-6] c.demo.crm.service.InteractionService    : Interaction with ID: 3 deleted successfully
+2025-04-05T14:37:33.301+05:30  INFO 5300 --- [crm-system] [http-nio-8095-exec-6] c.d.c.controller.InteractionController   : Interaction with ID: 3 deleted successfully
+2025-04-05T14:37:33.301+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2025-04-05T14:37:33.301+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Interaction deleted successfully"]
+2025-04-05T14:37:33.306+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-04-05T14:37:35.548+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] o.s.security.web.FilterChainProxy        : Securing DELETE /interactions/4
+2025-04-05T14:37:35.548+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2025-04-05T14:37:35.556+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        user_role r1_0 
+    join
+        role r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+2025-04-05T14:37:35.560+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-04-05T14:37:35.560+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2025-04-05T14:37:35.560+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] o.s.security.web.FilterChainProxy        : Secured DELETE /interactions/4
+2025-04-05T14:37:35.560+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] o.s.web.servlet.DispatcherServlet        : DELETE "/interactions/4", parameters={}
+2025-04-05T14:37:35.560+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.InteractionController#deleteInteraction(Long)
+2025-04-05T14:37:35.560+05:30  WARN 5300 --- [crm-system] [http-nio-8095-exec-8] c.d.c.controller.InteractionController   : Deleting interaction with ID: 4
+2025-04-05T14:37:35.560+05:30  WARN 5300 --- [crm-system] [http-nio-8095-exec-8] c.demo.crm.service.InteractionService    : Deleting interaction with ID: 4
+2025-04-05T14:37:35.564+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] org.hibernate.SQL                        : 
+    select
+        i1_0.id,
+        i1_0.customer_id,
+        c1_0.id,
+        c1_0.address,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone,
+        i1_0.date,
+        i1_0.details,
+        i1_0.interaction_type 
+    from
+        interactions i1_0 
+    join
+        customer c1_0 
+            on c1_0.id=i1_0.customer_id 
+    where
+        i1_0.id=?
+2025-04-05T14:37:35.564+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] org.hibernate.SQL                        : 
+    delete 
+    from
+        interactions 
+    where
+        id=?
+2025-04-05T14:37:35.574+05:30  INFO 5300 --- [crm-system] [http-nio-8095-exec-8] c.demo.crm.service.InteractionService    : Interaction with ID: 4 deleted successfully
+2025-04-05T14:37:35.574+05:30  INFO 5300 --- [crm-system] [http-nio-8095-exec-8] c.d.c.controller.InteractionController   : Interaction with ID: 4 deleted successfully
+2025-04-05T14:37:35.574+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2025-04-05T14:37:35.581+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Interaction deleted successfully"]
+2025-04-05T14:37:35.581+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-04-05T14:37:36.984+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] o.s.security.web.FilterChainProxy        : Securing DELETE /interactions/5
+2025-04-05T14:37:36.984+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2025-04-05T14:37:36.992+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        user_role r1_0 
+    join
+        role r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+2025-04-05T14:37:36.996+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-04-05T14:37:36.996+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2025-04-05T14:37:36.996+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] o.s.security.web.FilterChainProxy        : Secured DELETE /interactions/5
+2025-04-05T14:37:36.996+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] o.s.web.servlet.DispatcherServlet        : DELETE "/interactions/5", parameters={}
+2025-04-05T14:37:36.996+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.InteractionController#deleteInteraction(Long)
+2025-04-05T14:37:36.996+05:30  WARN 5300 --- [crm-system] [http-nio-8095-exec-7] c.d.c.controller.InteractionController   : Deleting interaction with ID: 5
+2025-04-05T14:37:36.996+05:30  WARN 5300 --- [crm-system] [http-nio-8095-exec-7] c.demo.crm.service.InteractionService    : Deleting interaction with ID: 5
+2025-04-05T14:37:37.000+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] org.hibernate.SQL                        : 
+    select
+        i1_0.id,
+        i1_0.customer_id,
+        c1_0.id,
+        c1_0.address,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone,
+        i1_0.date,
+        i1_0.details,
+        i1_0.interaction_type 
+    from
+        interactions i1_0 
+    join
+        customer c1_0 
+            on c1_0.id=i1_0.customer_id 
+    where
+        i1_0.id=?
+2025-04-05T14:37:37.000+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] org.hibernate.SQL                        : 
+    delete 
+    from
+        interactions 
+    where
+        id=?
+2025-04-05T14:37:37.008+05:30  INFO 5300 --- [crm-system] [http-nio-8095-exec-7] c.demo.crm.service.InteractionService    : Interaction with ID: 5 deleted successfully
+2025-04-05T14:37:37.008+05:30  INFO 5300 --- [crm-system] [http-nio-8095-exec-7] c.d.c.controller.InteractionController   : Interaction with ID: 5 deleted successfully
+2025-04-05T14:37:37.008+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2025-04-05T14:37:37.008+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Interaction deleted successfully"]
+2025-04-05T14:37:37.012+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK

@@ -1,0 +1,120 @@
+2025-04-05T12:23:14.373+05:30 DEBUG 5116 --- [crm-system] [http-nio-8095-exec-2] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        user_role r1_0 
+    join
+        role r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+2025-04-05T12:23:14.392+05:30 DEBUG 5116 --- [crm-system] [http-nio-8095-exec-2] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-04-05T12:23:14.393+05:30 DEBUG 5116 --- [crm-system] [http-nio-8095-exec-2] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2025-04-05T12:23:14.401+05:30 DEBUG 5116 --- [crm-system] [http-nio-8095-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /sales
+2025-04-05T12:23:14.407+05:30 DEBUG 5116 --- [crm-system] [http-nio-8095-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/sales", parameters={}
+2025-04-05T12:23:14.410+05:30 DEBUG 5116 --- [crm-system] [http-nio-8095-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.SaleController#getAllSales()
+2025-04-05T12:23:14.428+05:30  INFO 5116 --- [crm-system] [http-nio-8095-exec-2] com.demo.crm.controller.SaleController   : Fetching all sales
+2025-04-05T12:23:14.428+05:30  INFO 5116 --- [crm-system] [http-nio-8095-exec-2] com.demo.crm.service.SaleService         : Fetching all sales records
+2025-04-05T12:23:14.454+05:30 DEBUG 5116 --- [crm-system] [http-nio-8095-exec-2] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.amount,
+        s1_0.customer_id,
+        s1_0.date,
+        s1_0.product 
+    from
+        sale s1_0
+2025-04-05T12:23:14.469+05:30 DEBUG 5116 --- [crm-system] [http-nio-8095-exec-2] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.address,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customer c1_0 
+    where
+        c1_0.id=?
+2025-04-05T12:23:14.512+05:30 DEBUG 5116 --- [crm-system] [http-nio-8095-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-05T12:23:14.516+05:30 DEBUG 5116 --- [crm-system] [http-nio-8095-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.demo.crm.model.Sale@4d8e0af]]
+2025-04-05T12:23:14.606+05:30 DEBUG 5116 --- [crm-system] [http-nio-8095-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-04-05T12:24:42.548+05:30  INFO 5116 --- [crm-system] [RMI TCP Connection(5)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-04-05T12:24:42.552+05:30  INFO 5116 --- [crm-system] [RMI TCP Connection(5)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-05T12:24:42.558+05:30  INFO 5116 --- [crm-system] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-05T12:24:42.564+05:30  INFO 5116 --- [crm-system] [RMI TCP Connection(5)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05T12:24:42.567+05:30  INFO 5116 --- [crm-system] [RMI TCP Connection(5)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-05T12:24:42.578+05:30  INFO 5116 --- [crm-system] [RMI TCP Connection(5)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-05T13:09:33.919+05:30  INFO 992 --- [crm-system] [main] com.demo.crm.CrmSystemApplication        : Starting CrmSystemApplication using Java 23.0.2 with PID 992 (C:\Users\Sivanesh.C\eclipse-workspace\crm-system\target\classes started by Sivanesh.C in C:\Users\Sivanesh.C\eclipse-workspace\crm-system)
+2025-04-05T13:09:33.921+05:30 DEBUG 992 --- [crm-system] [main] com.demo.crm.CrmSystemApplication        : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-05T13:09:33.923+05:30  INFO 992 --- [crm-system] [main] com.demo.crm.CrmSystemApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-04-05T13:09:34.921+05:30  INFO 992 --- [crm-system] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-05T13:09:35.036+05:30  INFO 992 --- [crm-system] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102 ms. Found 4 JPA repository interfaces.
+2025-04-05T13:09:35.861+05:30  INFO 992 --- [crm-system] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8095 (http)
+2025-04-05T13:09:35.884+05:30  INFO 992 --- [crm-system] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-05T13:09:35.885+05:30  INFO 992 --- [crm-system] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-05T13:09:35.976+05:30  INFO 992 --- [crm-system] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-05T13:09:35.977+05:30  INFO 992 --- [crm-system] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1960 ms
+2025-04-05T13:09:36.257+05:30  INFO 992 --- [crm-system] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-05T13:09:36.322+05:30  INFO 992 --- [crm-system] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-04-05T13:09:36.374+05:30  INFO 992 --- [crm-system] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-05T13:09:36.776+05:30  INFO 992 --- [crm-system] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-05T13:09:36.822+05:30  INFO 992 --- [crm-system] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-05T13:09:37.378+05:30  INFO 992 --- [crm-system] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@290c266c
+2025-04-05T13:09:37.382+05:30  INFO 992 --- [crm-system] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-05T13:09:37.545+05:30  INFO 992 --- [crm-system] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-05T13:09:39.021+05:30  INFO 992 --- [crm-system] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-05T13:09:39.072+05:30 DEBUG 992 --- [crm-system] [main] org.hibernate.SQL                        : 
+    create table customer (
+        id bigint not null auto_increment,
+        address varchar(255),
+        email varchar(255),
+        name varchar(255),
+        phone varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+2025-04-05T13:09:39.113+05:30 DEBUG 992 --- [crm-system] [main] org.hibernate.SQL                        : 
+    create table interactions (
+        id bigint not null auto_increment,
+        date datetime(6),
+        details varchar(255),
+        interaction_type varchar(255),
+        customer_id bigint not null,
+        primary key (id)
+    ) engine=InnoDB
+2025-04-05T13:09:39.152+05:30 DEBUG 992 --- [crm-system] [main] org.hibernate.SQL                        : 
+    alter table role 
+       modify column name varchar(50) not null
+2025-04-05T13:09:39.279+05:30 DEBUG 992 --- [crm-system] [main] org.hibernate.SQL                        : 
+    create table sale (
+        id bigint not null auto_increment,
+        amount float(53),
+        date date,
+        product varchar(255),
+        customer_id bigint not null,
+        primary key (id)
+    ) engine=InnoDB
+2025-04-05T13:09:39.312+05:30 DEBUG 992 --- [crm-system] [main] org.hibernate.SQL                        : 
+    alter table interactions 
+       add constraint FKi2o8f8udk2ko1bmpwlvejsdhy 
+       foreign key (customer_id) 
+       references customer (id)
+2025-04-05T13:09:39.421+05:30 DEBUG 992 --- [crm-system] [main] org.hibernate.SQL                        : 
+    alter table sale 
+       add constraint FKjw88ojfoqquyd9f1obip1ar0g 
+       foreign key (customer_id) 
+       references customer (id)
+2025-04-05T13:09:39.565+05:30  INFO 992 --- [crm-system] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05T13:09:40.030+05:30  INFO 992 --- [crm-system] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-05T13:09:41.627+05:30  INFO 992 --- [crm-system] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailServiceImpl
+2025-04-05T13:09:41.821+05:30 DEBUG 992 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
+2025-04-05T13:09:41.938+05:30 DEBUG 992 --- [crm-system] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-04-05T13:09:42.023+05:30 DEBUG 992 --- [crm-system] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter

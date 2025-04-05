@@ -1,0 +1,96 @@
+2025-04-05T11:49:32.471+05:30  INFO 1020 --- [crm-system] [main] com.demo.crm.CrmSystemApplication        : Starting CrmSystemApplication using Java 23.0.2 with PID 1020 (C:\Users\Sivanesh.C\eclipse-workspace\crm-system\target\classes started by Sivanesh.C in C:\Users\Sivanesh.C\eclipse-workspace\crm-system)
+2025-04-05T11:49:32.477+05:30 DEBUG 1020 --- [crm-system] [main] com.demo.crm.CrmSystemApplication        : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-05T11:49:32.478+05:30  INFO 1020 --- [crm-system] [main] com.demo.crm.CrmSystemApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-04-05T11:49:33.819+05:30  INFO 1020 --- [crm-system] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-05T11:49:33.952+05:30  INFO 1020 --- [crm-system] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 119 ms. Found 4 JPA repository interfaces.
+2025-04-05T11:49:34.939+05:30  INFO 1020 --- [crm-system] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8095 (http)
+2025-04-05T11:49:34.961+05:30  INFO 1020 --- [crm-system] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-05T11:49:34.963+05:30  INFO 1020 --- [crm-system] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-05T11:49:35.042+05:30  INFO 1020 --- [crm-system] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-05T11:49:35.043+05:30  INFO 1020 --- [crm-system] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2488 ms
+2025-04-05T11:49:35.316+05:30  INFO 1020 --- [crm-system] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-05T11:49:35.386+05:30  INFO 1020 --- [crm-system] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-04-05T11:49:35.437+05:30  INFO 1020 --- [crm-system] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-05T11:49:35.939+05:30  INFO 1020 --- [crm-system] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-05T11:49:35.985+05:30  INFO 1020 --- [crm-system] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-05T11:49:36.637+05:30  INFO 1020 --- [crm-system] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18513c23
+2025-04-05T11:49:36.641+05:30  INFO 1020 --- [crm-system] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-05T11:49:36.805+05:30  INFO 1020 --- [crm-system] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-05T11:49:38.558+05:30  INFO 1020 --- [crm-system] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-05T11:49:38.680+05:30  INFO 1020 --- [crm-system] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05T11:49:39.268+05:30  INFO 1020 --- [crm-system] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-05T11:49:41.459+05:30  INFO 1020 --- [crm-system] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailServiceImpl
+2025-04-05T11:49:41.744+05:30 DEBUG 1020 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
+2025-04-05T11:49:41.928+05:30 DEBUG 1020 --- [crm-system] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-04-05T11:49:42.027+05:30 DEBUG 1020 --- [crm-system] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-04-05T11:49:42.178+05:30 DEBUG 1020 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-04-05T11:49:42.267+05:30 DEBUG 1020 --- [crm-system] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-04-05T11:49:42.509+05:30  INFO 1020 --- [crm-system] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8095 (http) with context path '/'
+2025-04-05T11:49:42.525+05:30  INFO 1020 --- [crm-system] [main] com.demo.crm.CrmSystemApplication        : Started CrmSystemApplication in 10.717 seconds (process running for 11.652)
+2025-04-05T11:49:48.788+05:30  INFO 1020 --- [crm-system] [http-nio-8095-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-05T11:49:48.796+05:30  INFO 1020 --- [crm-system] [http-nio-8095-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-05T11:49:48.796+05:30 DEBUG 1020 --- [crm-system] [http-nio-8095-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-04-05T11:49:48.796+05:30 DEBUG 1020 --- [crm-system] [http-nio-8095-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-04-05T11:49:48.796+05:30 DEBUG 1020 --- [crm-system] [http-nio-8095-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-04-05T11:49:48.798+05:30 DEBUG 1020 --- [crm-system] [http-nio-8095-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@22152da0
+2025-04-05T11:49:48.798+05:30 DEBUG 1020 --- [crm-system] [http-nio-8095-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@39da0d43
+2025-04-05T11:49:48.798+05:30 DEBUG 1020 --- [crm-system] [http-nio-8095-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-04-05T11:49:48.803+05:30  INFO 1020 --- [crm-system] [http-nio-8095-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2025-04-05T11:49:48.831+05:30 DEBUG 1020 --- [crm-system] [http-nio-8095-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /interactions
+2025-04-05T11:49:49.087+05:30 DEBUG 1020 --- [crm-system] [http-nio-8095-exec-2] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2025-04-05T11:49:49.164+05:30 DEBUG 1020 --- [crm-system] [http-nio-8095-exec-2] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        user_role r1_0 
+    join
+        role r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+2025-04-05T11:49:49.187+05:30 DEBUG 1020 --- [crm-system] [http-nio-8095-exec-2] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-04-05T11:49:49.187+05:30 DEBUG 1020 --- [crm-system] [http-nio-8095-exec-2] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2025-04-05T11:49:49.195+05:30 DEBUG 1020 --- [crm-system] [http-nio-8095-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /interactions
+2025-04-05T11:49:49.198+05:30 DEBUG 1020 --- [crm-system] [http-nio-8095-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/interactions", parameters={}
+2025-04-05T11:49:49.198+05:30 DEBUG 1020 --- [crm-system] [http-nio-8095-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.InteractionController#getAllInteractions()
+2025-04-05T11:49:49.220+05:30  INFO 1020 --- [crm-system] [http-nio-8095-exec-2] c.d.c.controller.InteractionController   : Fetching all interactions
+2025-04-05T11:49:49.220+05:30  INFO 1020 --- [crm-system] [http-nio-8095-exec-2] c.demo.crm.service.InteractionService    : Fetching all interactions from the database
+2025-04-05T11:49:49.243+05:30 DEBUG 1020 --- [crm-system] [http-nio-8095-exec-2] org.hibernate.SQL                        : 
+    select
+        i1_0.id,
+        i1_0.customer_id,
+        i1_0.date,
+        i1_0.details,
+        i1_0.interaction_type 
+    from
+        interactions i1_0
+2025-04-05T11:49:49.253+05:30 DEBUG 1020 --- [crm-system] [http-nio-8095-exec-2] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.address,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customer c1_0 
+    where
+        c1_0.id=?
+2025-04-05T11:49:49.259+05:30  INFO 1020 --- [crm-system] [http-nio-8095-exec-2] c.demo.crm.service.InteractionService    : Found 2 interactions

@@ -1,0 +1,94 @@
+2025-04-05T16:16:49.992+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Sat Apr 05 16:16:49 IST 2025, status=403, error=Forbidden, path=/reports/highest-selling- (truncated)...]
+2025-04-05T16:16:49.995+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 403
+2025-04-05T16:20:35.762+05:30  INFO 18068 --- [crm-system] [main] c.d.c.controller.CustomerControllerTest  : Starting CustomerControllerTest using Java 23.0.2 with PID 18068 (started by Sivanesh.C in C:\Users\Sivanesh.C\eclipse-workspace\crm-system)
+2025-04-05T16:20:35.763+05:30 DEBUG 18068 --- [crm-system] [main] c.d.c.controller.CustomerControllerTest  : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-05T16:20:35.766+05:30  INFO 18068 --- [crm-system] [main] c.d.c.controller.CustomerControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2025-04-05T16:20:35.790+05:30 DEBUG 18068 --- [crm-system] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@408613cc
+2025-04-05T16:20:37.891+05:30 DEBUG 18068 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2025-04-05T16:20:38.104+05:30 DEBUG 18068 --- [crm-system] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-04-05T16:20:38.189+05:30 DEBUG 18068 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-04-05T16:20:38.301+05:30 DEBUG 18068 --- [crm-system] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-04-05T16:20:38.398+05:30  WARN 18068 --- [crm-system] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: b022f7b1-ca7f-4287-a42d-6e56385e2f6b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-04-05T16:20:38.482+05:30  INFO 18068 --- [crm-system] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-04-05T16:20:38.769+05:30 DEBUG 18068 --- [crm-system] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-04-05T16:20:38.861+05:30  INFO 18068 --- [crm-system] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-04-05T16:20:38.862+05:30  INFO 18068 --- [crm-system] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-04-05T16:20:38.863+05:30  INFO 18068 --- [crm-system] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-04-05T16:20:38.925+05:30  INFO 18068 --- [crm-system] [main] c.d.c.controller.CustomerControllerTest  : Started CustomerControllerTest in 3.638 seconds (process running for 4.813)
+2025-04-05T16:20:39.072+05:30 DEBUG 18068 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.CustomerController#getCustomerById(Long)
+2025-04-05T16:20:39.096+05:30  INFO 18068 --- [crm-system] [main] c.d.crm.controller.CustomerController    : Fetching customer with ID: 1
+2025-04-05T16:20:39.157+05:30 DEBUG 18068 --- [crm-system] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-05T16:20:39.160+05:30 DEBUG 18068 --- [crm-system] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.demo.crm.model.Customer@6e49b011]
+2025-04-05T16:20:39.231+05:30 DEBUG 18068 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.CustomerController#addCustomer(Customer)
+2025-04-05T16:20:39.262+05:30 DEBUG 18068 --- [crm-system] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json" to [com.demo.crm.model.Customer@319b1c77]
+2025-04-05T16:20:39.264+05:30  INFO 18068 --- [crm-system] [main] c.d.crm.controller.CustomerController    : Adding new customer: siva - Address: coimbaotre
+2025-04-05T16:20:39.265+05:30 DEBUG 18068 --- [crm-system] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-05T16:20:39.266+05:30 DEBUG 18068 --- [crm-system] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.demo.crm.model.Customer@51869ad6]
+2025-04-05T16:20:39.273+05:30 DEBUG 18068 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.CustomerController#getAllCustomers()
+2025-04-05T16:20:39.273+05:30  INFO 18068 --- [crm-system] [main] c.d.crm.controller.CustomerController    : Fetching all customers
+2025-04-05T16:20:39.277+05:30 DEBUG 18068 --- [crm-system] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-05T16:20:39.277+05:30 DEBUG 18068 --- [crm-system] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.demo.crm.model.Customer@46591e98, com.demo.crm.model.Customer@5b6cc344]]
+2025-04-05T16:20:39.289+05:30 DEBUG 18068 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.CustomerController#updateCustomer(Long, Customer)
+2025-04-05T16:20:39.291+05:30 DEBUG 18068 --- [crm-system] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json" to [com.demo.crm.model.Customer@61836cd9]
+2025-04-05T16:20:39.291+05:30  INFO 18068 --- [crm-system] [main] c.d.crm.controller.CustomerController    : Updating customer with ID: 1 - New Address: new coimbaore
+2025-04-05T16:20:39.292+05:30 DEBUG 18068 --- [crm-system] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-05T16:20:39.292+05:30 DEBUG 18068 --- [crm-system] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.demo.crm.model.Customer@1b632442]
+2025-04-05T16:20:39.301+05:30 DEBUG 18068 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.CustomerController#deleteCustomer(Long)
+2025-04-05T16:20:39.302+05:30  INFO 18068 --- [crm-system] [main] c.d.crm.controller.CustomerController    : Deleting customer with ID: 1
+2025-04-05T16:20:39.303+05:30 DEBUG 18068 --- [crm-system] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2025-04-05T16:20:39.303+05:30 DEBUG 18068 --- [crm-system] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Customer deleted successfully!"]
+2025-04-05T16:20:39.315+05:30 DEBUG 18068 --- [crm-system] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@408613cc, started on Sat Apr 05 16:20:35 IST 2025
+2025-04-05T16:22:11.507+05:30  INFO 10020 --- [crm-system] [main] c.d.crm.controller.SaleControllerTest    : Starting SaleControllerTest using Java 23.0.2 with PID 10020 (started by Sivanesh.C in C:\Users\Sivanesh.C\eclipse-workspace\crm-system)
+2025-04-05T16:22:11.508+05:30 DEBUG 10020 --- [crm-system] [main] c.d.crm.controller.SaleControllerTest    : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-05T16:22:11.509+05:30  INFO 10020 --- [crm-system] [main] c.d.crm.controller.SaleControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2025-04-05T16:22:11.532+05:30 DEBUG 10020 --- [crm-system] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@408613cc
+2025-04-05T16:22:13.490+05:30 DEBUG 10020 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2025-04-05T16:22:13.687+05:30 DEBUG 10020 --- [crm-system] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-04-05T16:22:13.767+05:30 DEBUG 10020 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-04-05T16:22:13.880+05:30 DEBUG 10020 --- [crm-system] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-04-05T16:22:13.964+05:30  WARN 10020 --- [crm-system] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 3263e17a-0e54-457f-8957-2a11ee5b8be6
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-04-05T16:22:14.040+05:30  INFO 10020 --- [crm-system] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-04-05T16:22:14.364+05:30 DEBUG 10020 --- [crm-system] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-04-05T16:22:14.488+05:30  INFO 10020 --- [crm-system] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-04-05T16:22:14.502+05:30  INFO 10020 --- [crm-system] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-04-05T16:22:14.504+05:30  INFO 10020 --- [crm-system] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2025-04-05T16:22:14.585+05:30  INFO 10020 --- [crm-system] [main] c.d.crm.controller.SaleControllerTest    : Started SaleControllerTest in 3.506 seconds (process running for 4.511)
+2025-04-05T16:22:14.717+05:30 DEBUG 10020 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.SaleController#addSale(Sale)
+2025-04-05T16:22:14.838+05:30 DEBUG 10020 --- [crm-system] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json" to [com.demo.crm.model.Sale@498e41a4]
+2025-04-05T16:22:14.847+05:30  INFO 10020 --- [crm-system] [main] com.demo.crm.controller.SaleController   : Adding new sale for customer ID: 1
+2025-04-05T16:22:14.876+05:30 DEBUG 10020 --- [crm-system] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-05T16:22:14.878+05:30 DEBUG 10020 --- [crm-system] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.demo.crm.model.Sale@fd5689d]
+2025-04-05T16:22:14.937+05:30 DEBUG 10020 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.SaleController#getAllSales()
+2025-04-05T16:22:14.937+05:30  INFO 10020 --- [crm-system] [main] com.demo.crm.controller.SaleController   : Fetching all sales
+2025-04-05T16:22:14.944+05:30 DEBUG 10020 --- [crm-system] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-05T16:22:14.945+05:30 DEBUG 10020 --- [crm-system] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.demo.crm.model.Sale@50f05307, com.demo.crm.model.Sale@9cc0505]]
+2025-04-05T16:22:14.956+05:30 DEBUG 10020 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.SaleController#updateSale(Long, Sale)
+2025-04-05T16:22:14.960+05:30 DEBUG 10020 --- [crm-system] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json" to [com.demo.crm.model.Sale@2de7c84a]
+2025-04-05T16:22:14.960+05:30  INFO 10020 --- [crm-system] [main] com.demo.crm.controller.SaleController   : Updating sale with ID: 1
+2025-04-05T16:22:14.961+05:30 DEBUG 10020 --- [crm-system] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-05T16:22:14.962+05:30 DEBUG 10020 --- [crm-system] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.demo.crm.model.Sale@4f7ba0af]
+2025-04-05T16:22:14.968+05:30 DEBUG 10020 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.SaleController#getSaleById(Long)
+2025-04-05T16:22:14.969+05:30  INFO 10020 --- [crm-system] [main] com.demo.crm.controller.SaleController   : Fetching sale with ID: 1
+2025-04-05T16:22:14.969+05:30 DEBUG 10020 --- [crm-system] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-05T16:22:14.969+05:30 DEBUG 10020 --- [crm-system] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.demo.crm.model.Sale@6c75e3bc]
+2025-04-05T16:22:14.975+05:30 DEBUG 10020 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.SaleController#deleteSale(Long)
+2025-04-05T16:22:14.975+05:30  INFO 10020 --- [crm-system] [main] com.demo.crm.controller.SaleController   : Deleting sale with ID: 1
+2025-04-05T16:22:14.977+05:30 DEBUG 10020 --- [crm-system] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2025-04-05T16:22:14.977+05:30 DEBUG 10020 --- [crm-system] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Sale deleted successfully!"]
+2025-04-05T16:22:14.988+05:30 DEBUG 10020 --- [crm-system] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@408613cc, started on Sat Apr 05 16:22:11 IST 2025
+2025-04-05T16:29:41.391+05:30  INFO 14008 --- [crm-system] [RMI TCP Connection(33)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-04-05T16:29:41.394+05:30  INFO 14008 --- [crm-system] [RMI TCP Connection(33)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-05T16:29:41.397+05:30  INFO 14008 --- [crm-system] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-05T16:29:41.401+05:30  INFO 14008 --- [crm-system] [RMI TCP Connection(33)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05T16:29:41.403+05:30  INFO 14008 --- [crm-system] [RMI TCP Connection(33)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-05T16:29:41.409+05:30  INFO 14008 --- [crm-system] [RMI TCP Connection(33)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

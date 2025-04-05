@@ -1,0 +1,130 @@
+2025-04-05T13:10:53.817+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /customers
+2025-04-05T13:10:53.827+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/customers", parameters={}
+2025-04-05T13:10:53.827+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.CustomerController#getAllCustomers()
+2025-04-05T13:10:53.850+05:30  INFO 5300 --- [crm-system] [http-nio-8095-exec-2] c.d.crm.controller.CustomerController    : Fetching all customers
+2025-04-05T13:10:53.850+05:30  INFO 5300 --- [crm-system] [http-nio-8095-exec-2] com.demo.crm.service.CustomerService     : Fetching all customers
+2025-04-05T13:10:53.882+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-2] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.address,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customer c1_0
+2025-04-05T13:10:53.926+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-05T13:10:53.929+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[]]
+2025-04-05T13:10:53.958+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-04-05T13:13:51.693+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /customers
+2025-04-05T13:13:51.697+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-5] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2025-04-05T13:13:51.700+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-5] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        user_role r1_0 
+    join
+        role r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+2025-04-05T13:13:51.700+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-5] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-04-05T13:13:51.707+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-5] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2025-04-05T13:13:51.709+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /customers
+2025-04-05T13:13:51.709+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/customers", parameters={}
+2025-04-05T13:13:51.709+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.CustomerController#getAllCustomers()
+2025-04-05T13:13:51.709+05:30  INFO 5300 --- [crm-system] [http-nio-8095-exec-5] c.d.crm.controller.CustomerController    : Fetching all customers
+2025-04-05T13:13:51.709+05:30  INFO 5300 --- [crm-system] [http-nio-8095-exec-5] com.demo.crm.service.CustomerService     : Fetching all customers
+2025-04-05T13:13:51.709+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-5] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.address,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customer c1_0
+2025-04-05T13:13:51.716+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-05T13:13:51.716+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.demo.crm.model.Customer@3127179e, com.demo.crm.model.Customer@20b2b214]]
+2025-04-05T13:13:51.762+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-04-05T13:14:58.806+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /customers
+2025-04-05T13:14:58.806+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2025-04-05T13:14:58.806+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        user_role r1_0 
+    join
+        role r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+2025-04-05T13:14:58.814+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-04-05T13:14:58.814+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2025-04-05T13:14:58.814+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /customers
+2025-04-05T13:14:58.814+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/customers", parameters={}
+2025-04-05T13:14:58.814+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.CustomerController#addCustomer(Customer)
+2025-04-05T13:14:58.854+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.demo.crm.model.Customer@d7f211b]
+2025-04-05T13:14:58.871+05:30  INFO 5300 --- [crm-system] [http-nio-8095-exec-8] c.d.crm.controller.CustomerController    : Adding new customer: ashok - Address: abcd,mysore
+2025-04-05T13:14:58.871+05:30  INFO 5300 --- [crm-system] [http-nio-8095-exec-8] com.demo.crm.service.CustomerService     : Adding new customer: ashok
+2025-04-05T13:14:58.887+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] org.hibernate.SQL                        : 
+    insert 
+    into
+        customer
+        (address, email, name, phone) 
+    values
+        (?, ?, ?, ?)
+2025-04-05T13:14:58.923+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-05T13:14:58.923+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.demo.crm.model.Customer@d7f211b]
+2025-04-05T13:14:58.923+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2025-04-05T13:16:57.264+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /customers
+2025-04-05T13:16:57.264+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-1] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2025-04-05T13:16:57.267+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-1] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        user_role r1_0 
+    join
+        role r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+2025-04-05T13:16:57.267+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-1] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-04-05T13:16:57.267+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-1] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2025-04-05T13:16:57.272+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /customers
+2025-04-05T13:16:57.272+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/customers", parameters={}
+2025-04-05T13:16:57.272+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.CustomerController#getAllCustomers()
+2025-04-05T13:16:57.272+05:30  INFO 5300 --- [crm-system] [http-nio-8095-exec-1] c.d.crm.controller.CustomerController    : Fetching all customers
+2025-04-05T13:16:57.272+05:30  INFO 5300 --- [crm-system] [http-nio-8095-exec-1] com.demo.crm.service.CustomerService     : Fetching all customers

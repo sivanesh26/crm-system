@@ -1,0 +1,79 @@
+2025-04-05T11:49:49.287+05:30 DEBUG 1020 --- [crm-system] [http-nio-8095-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-05T11:49:49.291+05:30 DEBUG 1020 --- [crm-system] [http-nio-8095-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.demo.crm.model.Interaction@52ae8c62, com.demo.crm.model.Interaction@15e7f647]]
+2025-04-05T11:49:49.342+05:30 DEBUG 1020 --- [crm-system] [http-nio-8095-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-04-05T11:53:14.696+05:30  INFO 1020 --- [crm-system] [RMI TCP Connection(7)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-04-05T11:53:14.702+05:30  INFO 1020 --- [crm-system] [RMI TCP Connection(7)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-05T11:53:14.709+05:30  INFO 1020 --- [crm-system] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-05T11:53:14.716+05:30  INFO 1020 --- [crm-system] [RMI TCP Connection(7)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05T11:53:14.719+05:30  INFO 1020 --- [crm-system] [RMI TCP Connection(7)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-05T11:53:14.729+05:30  INFO 1020 --- [crm-system] [RMI TCP Connection(7)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-05T11:53:20.129+05:30  INFO 3160 --- [crm-system] [main] com.demo.crm.CrmSystemApplication        : Starting CrmSystemApplication using Java 23.0.2 with PID 3160 (C:\Users\Sivanesh.C\eclipse-workspace\crm-system\target\classes started by Sivanesh.C in C:\Users\Sivanesh.C\eclipse-workspace\crm-system)
+2025-04-05T11:53:20.133+05:30 DEBUG 3160 --- [crm-system] [main] com.demo.crm.CrmSystemApplication        : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-05T11:53:20.135+05:30  INFO 3160 --- [crm-system] [main] com.demo.crm.CrmSystemApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-04-05T11:53:21.297+05:30  INFO 3160 --- [crm-system] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-05T11:53:21.406+05:30  INFO 3160 --- [crm-system] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 4 JPA repository interfaces.
+2025-04-05T11:53:22.172+05:30  INFO 3160 --- [crm-system] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8095 (http)
+2025-04-05T11:53:22.192+05:30  INFO 3160 --- [crm-system] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-05T11:53:22.192+05:30  INFO 3160 --- [crm-system] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-05T11:53:22.260+05:30  INFO 3160 --- [crm-system] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-05T11:53:22.261+05:30  INFO 3160 --- [crm-system] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2027 ms
+2025-04-05T11:53:22.454+05:30  INFO 3160 --- [crm-system] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-05T11:53:22.524+05:30  INFO 3160 --- [crm-system] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-04-05T11:53:22.562+05:30  INFO 3160 --- [crm-system] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-05T11:53:22.933+05:30  INFO 3160 --- [crm-system] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-05T11:53:22.972+05:30  INFO 3160 --- [crm-system] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-05T11:53:23.517+05:30  INFO 3160 --- [crm-system] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@75c33608
+2025-04-05T11:53:23.520+05:30  INFO 3160 --- [crm-system] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-05T11:53:23.675+05:30  INFO 3160 --- [crm-system] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-05T11:53:25.136+05:30  INFO 3160 --- [crm-system] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-05T11:53:25.248+05:30  INFO 3160 --- [crm-system] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05T11:53:25.688+05:30  INFO 3160 --- [crm-system] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-05T11:53:26.921+05:30  INFO 3160 --- [crm-system] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailServiceImpl
+2025-04-05T11:53:27.101+05:30 DEBUG 3160 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
+2025-04-05T11:53:27.225+05:30 DEBUG 3160 --- [crm-system] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-04-05T11:53:27.307+05:30 DEBUG 3160 --- [crm-system] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-04-05T11:53:27.412+05:30 DEBUG 3160 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-04-05T11:53:27.472+05:30 DEBUG 3160 --- [crm-system] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-04-05T11:53:27.684+05:30  INFO 3160 --- [crm-system] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8095 (http) with context path '/'
+2025-04-05T11:53:27.696+05:30  INFO 3160 --- [crm-system] [main] com.demo.crm.CrmSystemApplication        : Started CrmSystemApplication in 8.299 seconds (process running for 9.328)
+2025-04-05T11:53:31.303+05:30  INFO 3160 --- [crm-system] [http-nio-8095-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-05T11:53:31.306+05:30  INFO 3160 --- [crm-system] [http-nio-8095-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-05T11:53:31.307+05:30 DEBUG 3160 --- [crm-system] [http-nio-8095-exec-5] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-04-05T11:53:31.308+05:30 DEBUG 3160 --- [crm-system] [http-nio-8095-exec-5] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-04-05T11:53:31.309+05:30 DEBUG 3160 --- [crm-system] [http-nio-8095-exec-5] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-04-05T11:53:31.311+05:30 DEBUG 3160 --- [crm-system] [http-nio-8095-exec-5] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@22152da0
+2025-04-05T11:53:31.311+05:30 DEBUG 3160 --- [crm-system] [http-nio-8095-exec-5] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@39da0d43
+2025-04-05T11:53:31.312+05:30 DEBUG 3160 --- [crm-system] [http-nio-8095-exec-5] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-04-05T11:53:31.312+05:30  INFO 3160 --- [crm-system] [http-nio-8095-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2025-04-05T11:53:31.336+05:30 DEBUG 3160 --- [crm-system] [http-nio-8095-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /interactions
+2025-04-05T11:53:31.509+05:30 DEBUG 3160 --- [crm-system] [http-nio-8095-exec-5] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2025-04-05T11:53:31.562+05:30 DEBUG 3160 --- [crm-system] [http-nio-8095-exec-5] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        user_role r1_0 
+    join
+        role r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+2025-04-05T11:53:31.578+05:30 DEBUG 3160 --- [crm-system] [http-nio-8095-exec-5] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-04-05T11:53:31.579+05:30 DEBUG 3160 --- [crm-system] [http-nio-8095-exec-5] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]

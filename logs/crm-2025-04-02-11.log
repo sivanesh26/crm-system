@@ -1,0 +1,114 @@
+2025-04-02T20:01:56.091+05:30 DEBUG 5132 --- [crm-system] [http-nio-8095-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /sales/2
+2025-04-02T20:01:56.099+05:30 DEBUG 5132 --- [crm-system] [http-nio-8095-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/sales/2", parameters={}
+2025-04-02T20:01:56.105+05:30 DEBUG 5132 --- [crm-system] [http-nio-8095-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.SaleController#getSaleById(Long)
+2025-04-02T20:01:56.131+05:30  INFO 5132 --- [crm-system] [http-nio-8095-exec-1] com.demo.crm.controller.SaleController   : Fetching sale with ID: 2
+2025-04-02T20:01:56.132+05:30  INFO 5132 --- [crm-system] [http-nio-8095-exec-1] com.demo.crm.service.SaleService         : Fetching sale with ID: 2
+2025-04-02T20:01:56.157+05:30 DEBUG 5132 --- [crm-system] [http-nio-8095-exec-1] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.amount,
+        s1_0.customer_id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone,
+        s1_0.date 
+    from
+        sale s1_0 
+    join
+        customer c1_0 
+            on c1_0.id=s1_0.customer_id 
+    where
+        s1_0.id=?
+2025-04-02T20:01:56.251+05:30 DEBUG 5132 --- [crm-system] [http-nio-8095-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-02T20:01:56.253+05:30 DEBUG 5132 --- [crm-system] [http-nio-8095-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.demo.crm.model.Sale@207f605a]
+2025-04-02T20:01:56.277+05:30 DEBUG 5132 --- [crm-system] [http-nio-8095-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-04-02T20:02:09.987+05:30 DEBUG 5132 --- [crm-system] [http-nio-8095-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /sales/2
+2025-04-02T20:02:09.987+05:30 DEBUG 5132 --- [crm-system] [http-nio-8095-exec-3] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2025-04-02T20:02:09.993+05:30 DEBUG 5132 --- [crm-system] [http-nio-8095-exec-3] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        user_role r1_0 
+    join
+        role r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+2025-04-02T20:02:09.993+05:30 DEBUG 5132 --- [crm-system] [http-nio-8095-exec-3] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-04-02T20:02:09.993+05:30 DEBUG 5132 --- [crm-system] [http-nio-8095-exec-3] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=sales@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_SALES]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_SALES]]
+2025-04-02T20:02:09.993+05:30 DEBUG 5132 --- [crm-system] [http-nio-8095-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /sales/2
+2025-04-02T20:02:09.993+05:30 DEBUG 5132 --- [crm-system] [http-nio-8095-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/sales/2", parameters={}
+2025-04-02T20:02:10.002+05:30 DEBUG 5132 --- [crm-system] [http-nio-8095-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.SaleController#getSaleById(Long)
+2025-04-02T20:02:10.002+05:30  INFO 5132 --- [crm-system] [http-nio-8095-exec-3] com.demo.crm.controller.SaleController   : Fetching sale with ID: 2
+2025-04-02T20:02:10.002+05:30  INFO 5132 --- [crm-system] [http-nio-8095-exec-3] com.demo.crm.service.SaleService         : Fetching sale with ID: 2
+2025-04-02T20:02:10.002+05:30 DEBUG 5132 --- [crm-system] [http-nio-8095-exec-3] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.amount,
+        s1_0.customer_id,
+        c1_0.id,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone,
+        s1_0.date 
+    from
+        sale s1_0 
+    join
+        customer c1_0 
+            on c1_0.id=s1_0.customer_id 
+    where
+        s1_0.id=?
+2025-04-02T20:02:10.011+05:30 DEBUG 5132 --- [crm-system] [http-nio-8095-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-02T20:02:10.011+05:30 DEBUG 5132 --- [crm-system] [http-nio-8095-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.demo.crm.model.Sale@4e23d009]
+2025-04-02T20:02:10.014+05:30 DEBUG 5132 --- [crm-system] [http-nio-8095-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-04-02T20:02:17.158+05:30 DEBUG 5132 --- [crm-system] [http-nio-8095-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /sales/2
+2025-04-02T20:02:17.158+05:30 DEBUG 5132 --- [crm-system] [http-nio-8095-exec-4] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2025-04-02T20:02:17.168+05:30 DEBUG 5132 --- [crm-system] [http-nio-8095-exec-4] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        user_role r1_0 
+    join
+        role r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+2025-04-02T20:02:17.170+05:30 DEBUG 5132 --- [crm-system] [http-nio-8095-exec-4] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-04-02T20:02:17.170+05:30 DEBUG 5132 --- [crm-system] [http-nio-8095-exec-4] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=support@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_SUPPORT]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_SUPPORT]]
+2025-04-02T20:02:17.170+05:30 DEBUG 5132 --- [crm-system] [http-nio-8095-exec-4] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2025-04-02T20:02:17.185+05:30 DEBUG 5132 --- [crm-system] [http-nio-8095-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-04-02T20:02:17.185+05:30 DEBUG 5132 --- [crm-system] [http-nio-8095-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /error
+2025-04-02T20:02:17.185+05:30 DEBUG 5132 --- [crm-system] [http-nio-8095-exec-4] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2025-04-02T20:02:17.185+05:30 DEBUG 5132 --- [crm-system] [http-nio-8095-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-04-02T20:02:17.200+05:30 DEBUG 5132 --- [crm-system] [http-nio-8095-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-02T20:02:17.200+05:30 DEBUG 5132 --- [crm-system] [http-nio-8095-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Wed Apr 02 20:02:17 IST 2025, status=403, error=Forbidden, path=/sales/2}]
+2025-04-02T20:02:17.216+05:30 DEBUG 5132 --- [crm-system] [http-nio-8095-exec-4] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 403
+2025-04-02T20:03:54.762+05:30  INFO 5132 --- [crm-system] [RMI TCP Connection(4)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-04-02T20:03:54.762+05:30  INFO 5132 --- [crm-system] [RMI TCP Connection(4)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-02T20:03:54.778+05:30  INFO 5132 --- [crm-system] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-02T20:03:54.778+05:30  INFO 5132 --- [crm-system] [RMI TCP Connection(4)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-02T20:03:54.778+05:30  INFO 5132 --- [crm-system] [RMI TCP Connection(4)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-02T20:03:54.794+05:30  INFO 5132 --- [crm-system] [RMI TCP Connection(4)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

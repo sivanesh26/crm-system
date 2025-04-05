@@ -1,0 +1,107 @@
+2025-04-04T18:20:19.145+05:30 DEBUG 15620 --- [crm-system] [http-nio-8095-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2025-04-04T18:20:19.149+05:30 DEBUG 15620 --- [crm-system] [http-nio-8095-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["An error occurred. Please try again later."]
+2025-04-04T18:20:19.153+05:30 DEBUG 15620 --- [crm-system] [http-nio-8095-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource interaction.]
+2025-04-04T18:20:19.153+05:30 DEBUG 15620 --- [crm-system] [http-nio-8095-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 500 INTERNAL_SERVER_ERROR
+2025-04-04T18:20:21.972+05:30 DEBUG 15620 --- [crm-system] [http-nio-8095-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /interactions
+2025-04-04T18:20:21.974+05:30 DEBUG 15620 --- [crm-system] [http-nio-8095-exec-7] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2025-04-04T18:20:21.974+05:30 DEBUG 15620 --- [crm-system] [http-nio-8095-exec-7] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        user_role r1_0 
+    join
+        role r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+2025-04-04T18:20:21.982+05:30 DEBUG 15620 --- [crm-system] [http-nio-8095-exec-7] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-04-04T18:20:21.982+05:30 DEBUG 15620 --- [crm-system] [http-nio-8095-exec-7] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2025-04-04T18:20:21.982+05:30 DEBUG 15620 --- [crm-system] [http-nio-8095-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /interactions
+2025-04-04T18:20:21.982+05:30 DEBUG 15620 --- [crm-system] [http-nio-8095-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/interactions", parameters={}
+2025-04-04T18:20:21.982+05:30 DEBUG 15620 --- [crm-system] [http-nio-8095-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.InteractionController#getAllInteractions()
+2025-04-04T18:20:21.990+05:30 DEBUG 15620 --- [crm-system] [http-nio-8095-exec-7] org.hibernate.SQL                        : 
+    select
+        i1_0.id,
+        i1_0.customer_id,
+        i1_0.date,
+        i1_0.details,
+        i1_0.interaction_type 
+    from
+        interactions i1_0
+2025-04-04T18:20:21.990+05:30 DEBUG 15620 --- [crm-system] [http-nio-8095-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-04T18:20:21.990+05:30 DEBUG 15620 --- [crm-system] [http-nio-8095-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[]]
+2025-04-04T18:20:21.998+05:30 DEBUG 15620 --- [crm-system] [http-nio-8095-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-04-04T18:20:29.860+05:30 DEBUG 15620 --- [crm-system] [http-nio-8095-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /interactions
+2025-04-04T18:20:29.860+05:30 DEBUG 15620 --- [crm-system] [http-nio-8095-exec-9] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2025-04-04T18:20:29.868+05:30 DEBUG 15620 --- [crm-system] [http-nio-8095-exec-9] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        user_role r1_0 
+    join
+        role r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+2025-04-04T18:20:29.868+05:30 DEBUG 15620 --- [crm-system] [http-nio-8095-exec-9] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-04-04T18:20:29.868+05:30 DEBUG 15620 --- [crm-system] [http-nio-8095-exec-9] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=sales@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_SALES]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_SALES]]
+2025-04-04T18:20:29.868+05:30 DEBUG 15620 --- [crm-system] [http-nio-8095-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /interactions
+2025-04-04T18:20:29.868+05:30 DEBUG 15620 --- [crm-system] [http-nio-8095-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/interactions", parameters={}
+2025-04-04T18:20:29.868+05:30 DEBUG 15620 --- [crm-system] [http-nio-8095-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.InteractionController#getAllInteractions()
+2025-04-04T18:20:29.877+05:30 DEBUG 15620 --- [crm-system] [http-nio-8095-exec-9] org.hibernate.SQL                        : 
+    select
+        i1_0.id,
+        i1_0.customer_id,
+        i1_0.date,
+        i1_0.details,
+        i1_0.interaction_type 
+    from
+        interactions i1_0
+2025-04-04T18:20:29.885+05:30 DEBUG 15620 --- [crm-system] [http-nio-8095-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-04T18:20:29.885+05:30 DEBUG 15620 --- [crm-system] [http-nio-8095-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[]]
+2025-04-04T18:20:29.886+05:30 DEBUG 15620 --- [crm-system] [http-nio-8095-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-04-04T18:21:30.621+05:30  INFO 15620 --- [crm-system] [RMI TCP Connection(5)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-04-04T18:21:30.625+05:30  INFO 15620 --- [crm-system] [RMI TCP Connection(5)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-04T18:21:30.631+05:30  INFO 15620 --- [crm-system] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-04T18:21:30.638+05:30  INFO 15620 --- [crm-system] [RMI TCP Connection(5)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-04T18:21:30.641+05:30  INFO 15620 --- [crm-system] [RMI TCP Connection(5)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-04T18:21:30.650+05:30  INFO 15620 --- [crm-system] [RMI TCP Connection(5)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-04T18:23:34.092+05:30  INFO 18476 --- [crm-system] [main] c.d.c.controller.CustomerControllerTest  : Starting CustomerControllerTest using Java 23.0.2 with PID 18476 (started by Sivanesh.C in C:\Users\Sivanesh.C\eclipse-workspace\crm-system)
+2025-04-04T18:23:34.093+05:30 DEBUG 18476 --- [crm-system] [main] c.d.c.controller.CustomerControllerTest  : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-04T18:23:34.095+05:30  INFO 18476 --- [crm-system] [main] c.d.c.controller.CustomerControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2025-04-04T18:23:34.125+05:30 DEBUG 18476 --- [crm-system] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@79c5636f
+2025-04-04T18:23:37.532+05:30 DEBUG 18476 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2025-04-04T18:23:37.938+05:30 DEBUG 18476 --- [crm-system] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-04-04T18:23:38.053+05:30 DEBUG 18476 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-04-04T18:23:38.196+05:30 DEBUG 18476 --- [crm-system] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-04-04T18:23:38.371+05:30  WARN 18476 --- [crm-system] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 23de0495-431b-421c-93f4-51f1c84a3a77
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-04-04T18:23:38.413+05:30  INFO 18476 --- [crm-system] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-04-04T18:23:38.727+05:30 DEBUG 18476 --- [crm-system] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-04-04T18:23:38.899+05:30  INFO 18476 --- [crm-system] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''

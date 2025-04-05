@@ -1,0 +1,115 @@
+2025-04-05T13:42:56.209+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-2] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2025-04-05T13:42:56.218+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-04-05T13:42:56.226+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-05T13:42:56.226+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Sat Apr 05 13:42:56 IST 2025, status=403, error=Forbidden, path=/customers}]
+2025-04-05T13:42:56.239+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-2] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 403
+2025-04-05T13:46:27.923+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /customers
+2025-04-05T13:46:27.931+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-5] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2025-04-05T13:46:27.936+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-5] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        user_role r1_0 
+    join
+        role r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+2025-04-05T13:46:27.939+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-5] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-04-05T13:46:27.939+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-5] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=sales@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_SALES]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_SALES]]
+2025-04-05T13:46:27.939+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-5] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2025-04-05T13:46:27.939+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /error
+2025-04-05T13:46:27.939+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /error
+2025-04-05T13:46:27.939+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-5] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for POST "/error", parameters={}
+2025-04-05T13:46:27.939+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-04-05T13:46:27.939+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-05T13:46:27.939+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Sat Apr 05 13:46:27 IST 2025, status=403, error=Forbidden, path=/customers}]
+2025-04-05T13:46:27.947+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-5] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 403
+2025-04-05T13:46:59.630+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-6] o.s.security.web.FilterChainProxy        : Securing PUT /customers
+2025-04-05T13:46:59.635+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-6] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2025-04-05T13:46:59.639+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-6] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        user_role r1_0 
+    join
+        role r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+2025-04-05T13:46:59.641+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-6] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-04-05T13:46:59.642+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-6] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=sales@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_SALES]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_SALES]]
+2025-04-05T13:46:59.642+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-6] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2025-04-05T13:46:59.643+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-6] o.s.security.web.FilterChainProxy        : Securing PUT /error
+2025-04-05T13:46:59.644+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-6] o.s.security.web.FilterChainProxy        : Secured PUT /error
+2025-04-05T13:46:59.644+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-6] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for PUT "/error", parameters={}
+2025-04-05T13:46:59.644+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-04-05T13:46:59.644+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-05T13:46:59.645+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Sat Apr 05 13:46:59 IST 2025, status=403, error=Forbidden, path=/customers}]
+2025-04-05T13:46:59.646+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-6] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 403
+2025-04-05T13:47:34.294+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] o.s.security.web.FilterChainProxy        : Securing PUT /customers/1
+2025-04-05T13:47:34.298+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2025-04-05T13:47:34.303+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        user_role r1_0 
+    join
+        role r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+2025-04-05T13:47:34.306+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-04-05T13:47:34.306+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=sales@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_SALES]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_SALES]]
+2025-04-05T13:47:34.307+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2025-04-05T13:47:34.309+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] o.s.security.web.FilterChainProxy        : Securing PUT /error
+2025-04-05T13:47:34.309+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] o.s.security.web.FilterChainProxy        : Secured PUT /error
+2025-04-05T13:47:34.310+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for PUT "/error", parameters={}
+2025-04-05T13:47:34.310+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-04-05T13:47:34.311+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-05T13:47:34.311+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Sat Apr 05 13:47:34 IST 2025, status=403, error=Forbidden, path=/customers/1}]
+2025-04-05T13:47:34.314+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 403
+2025-04-05T13:47:56.724+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] o.s.security.web.FilterChainProxy        : Securing DELETE /customers/1
+2025-04-05T13:47:56.728+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    from
+        user u1_0 
+    where
+        u1_0.email=?

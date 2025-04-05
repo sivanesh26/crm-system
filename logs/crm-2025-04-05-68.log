@@ -1,0 +1,149 @@
+2025-04-05T16:02:43.352+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /interactions
+2025-04-05T16:02:43.353+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/interactions", parameters={}
+2025-04-05T16:02:43.354+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.InteractionController#addInteraction(Interaction)
+2025-04-05T16:02:43.355+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.demo.crm.model.Interaction@65a352a4]
+2025-04-05T16:02:43.355+05:30  INFO 14008 --- [crm-system] [http-nio-8095-exec-5] c.d.c.controller.InteractionController   : Adding new interaction for customer ID: 3
+2025-04-05T16:02:43.358+05:30  INFO 14008 --- [crm-system] [http-nio-8095-exec-5] com.demo.crm.service.CustomerService     : Fetching customer with ID: 3
+2025-04-05T16:02:43.361+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-5] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.address,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customer c1_0 
+    where
+        c1_0.id=?
+2025-04-05T16:02:43.364+05:30  INFO 14008 --- [crm-system] [http-nio-8095-exec-5] c.demo.crm.service.InteractionService    : Saving new interaction for customer: ashok
+2025-04-05T16:02:43.365+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-5] org.hibernate.SQL                        : 
+    insert 
+    into
+        interactions
+        (customer_id, date, details, interaction_type) 
+    values
+        (?, ?, ?, ?)
+2025-04-05T16:02:43.373+05:30  INFO 14008 --- [crm-system] [http-nio-8095-exec-5] c.demo.crm.service.InteractionService    : Interaction saved successfully with ID: 2
+2025-04-05T16:02:43.373+05:30  INFO 14008 --- [crm-system] [http-nio-8095-exec-5] c.d.c.controller.InteractionController   : Interaction added successfully with ID: 2
+2025-04-05T16:02:43.374+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-05T16:02:43.374+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.demo.crm.model.Interaction@65a352a4]
+2025-04-05T16:02:43.376+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-04-05T16:02:51.355+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /interactions
+2025-04-05T16:02:51.358+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-4] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2025-04-05T16:02:51.361+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-4] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        user_role r1_0 
+    join
+        role r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+2025-04-05T16:02:51.363+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-4] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-04-05T16:02:51.363+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-4] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2025-04-05T16:02:51.363+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /interactions
+2025-04-05T16:02:51.364+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/interactions", parameters={}
+2025-04-05T16:02:51.364+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.InteractionController#getAllInteractions()
+2025-04-05T16:02:51.364+05:30  INFO 14008 --- [crm-system] [http-nio-8095-exec-4] c.d.c.controller.InteractionController   : Fetching all interactions
+2025-04-05T16:02:51.364+05:30  INFO 14008 --- [crm-system] [http-nio-8095-exec-4] c.demo.crm.service.InteractionService    : Fetching all interactions from the database
+2025-04-05T16:02:51.367+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-4] org.hibernate.SQL                        : 
+    select
+        i1_0.id,
+        i1_0.customer_id,
+        i1_0.date,
+        i1_0.details,
+        i1_0.interaction_type 
+    from
+        interactions i1_0
+2025-04-05T16:02:51.369+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-4] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.address,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customer c1_0 
+    where
+        c1_0.id=?
+2025-04-05T16:02:51.372+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-4] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.address,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone 
+    from
+        customer c1_0 
+    where
+        c1_0.id=?
+2025-04-05T16:02:51.375+05:30  INFO 14008 --- [crm-system] [http-nio-8095-exec-4] c.demo.crm.service.InteractionService    : Found 2 interactions
+2025-04-05T16:02:51.376+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-05T16:02:51.376+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.demo.crm.model.Interaction@1601087f, com.demo.crm.model.Interaction@6d1fa920]]
+2025-04-05T16:02:51.377+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-04-05T16:03:48.466+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /interactions/2
+2025-04-05T16:03:48.469+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-6] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2025-04-05T16:03:48.473+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-6] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        user_role r1_0 
+    join
+        role r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+2025-04-05T16:03:48.477+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-6] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-04-05T16:03:48.477+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-6] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2025-04-05T16:03:48.478+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /interactions/2
+2025-04-05T16:03:48.479+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/interactions/2", parameters={}
+2025-04-05T16:03:48.479+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.InteractionController#getInteractionById(Long)
+2025-04-05T16:03:48.483+05:30  INFO 14008 --- [crm-system] [http-nio-8095-exec-6] c.d.c.controller.InteractionController   : Fetching interaction with ID: 2
+2025-04-05T16:03:48.483+05:30  INFO 14008 --- [crm-system] [http-nio-8095-exec-6] c.demo.crm.service.InteractionService    : Fetching interaction with ID: 2
+2025-04-05T16:03:48.487+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-6] org.hibernate.SQL                        : 
+    select
+        i1_0.id,
+        i1_0.customer_id,
+        c1_0.id,
+        c1_0.address,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone,
+        i1_0.date,
+        i1_0.details,
+        i1_0.interaction_type 
+    from
+        interactions i1_0 
+    join
+        customer c1_0 
+            on c1_0.id=i1_0.customer_id 
+    where
+        i1_0.id=?
+2025-04-05T16:03:48.494+05:30  INFO 14008 --- [crm-system] [http-nio-8095-exec-6] c.demo.crm.service.InteractionService    : Interaction found with ID: 2
+2025-04-05T16:03:48.498+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-05T16:03:48.498+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Optional[com.demo.crm.model.Interaction@24f7baeb]]
+2025-04-05T16:03:48.500+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-04-05T16:05:55.241+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /interactions

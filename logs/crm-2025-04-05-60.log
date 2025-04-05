@@ -1,0 +1,118 @@
+2025-04-05T14:39:04.536+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.demo.crm.model.Interaction@4654629b]]
+2025-04-05T14:39:04.544+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-04-05T15:50:31.393+05:30  WARN 5300 --- [crm-system] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h11m30s342ms399µs600ns).
+2025-04-05T15:52:49.229+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /interactions
+2025-04-05T15:52:49.236+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-4] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2025-04-05T15:52:49.242+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-4] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        user_role r1_0 
+    join
+        role r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+2025-04-05T15:52:49.245+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-4] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-04-05T15:52:49.245+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-4] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2025-04-05T15:52:49.245+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /interactions
+2025-04-05T15:52:49.246+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/interactions", parameters={}
+2025-04-05T15:52:49.246+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.InteractionController#addInteraction(Interaction)
+2025-04-05T15:52:49.247+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.demo.crm.model.Interaction@408617ec]
+2025-04-05T15:52:49.247+05:30  INFO 5300 --- [crm-system] [http-nio-8095-exec-4] c.d.c.controller.InteractionController   : Adding new interaction for customer ID: com.demo.crm.model.Customer@75d700e9
+2025-04-05T15:52:49.247+05:30  INFO 5300 --- [crm-system] [http-nio-8095-exec-4] c.demo.crm.service.InteractionService    : Saving new interaction for customer ID: com.demo.crm.model.Customer@75d700e9
+2025-04-05T15:52:49.249+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        interactions
+        (customer_id, date, details, interaction_type) 
+    values
+        (?, ?, ?, ?)
+2025-04-05T15:52:49.258+05:30  INFO 5300 --- [crm-system] [http-nio-8095-exec-4] c.demo.crm.service.InteractionService    : Interaction saved successfully with ID: 7
+2025-04-05T15:52:49.258+05:30  INFO 5300 --- [crm-system] [http-nio-8095-exec-4] c.d.c.controller.InteractionController   : Interaction added successfully with ID: 7
+2025-04-05T15:52:49.259+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-05T15:52:49.259+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.demo.crm.model.Interaction@408617ec]
+2025-04-05T15:52:49.260+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-04-05T15:55:00.130+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /interactions
+2025-04-05T15:55:00.132+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2025-04-05T15:55:00.133+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        user_role r1_0 
+    join
+        role r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+2025-04-05T15:55:00.134+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-04-05T15:55:00.135+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2025-04-05T15:55:00.135+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /interactions
+2025-04-05T15:55:00.135+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/interactions", parameters={}
+2025-04-05T15:55:00.135+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.InteractionController#addInteraction(Interaction)
+2025-04-05T15:55:00.137+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.demo.crm.model.Interaction@a4fc93e]
+2025-04-05T15:55:00.137+05:30  INFO 5300 --- [crm-system] [http-nio-8095-exec-8] c.d.c.controller.InteractionController   : Adding new interaction for customer ID: com.demo.crm.model.Customer@6ca70a77
+2025-04-05T15:55:00.137+05:30  INFO 5300 --- [crm-system] [http-nio-8095-exec-8] c.demo.crm.service.InteractionService    : Saving new interaction for customer ID: com.demo.crm.model.Customer@6ca70a77
+2025-04-05T15:55:00.138+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] org.hibernate.SQL                        : 
+    insert 
+    into
+        interactions
+        (customer_id, date, details, interaction_type) 
+    values
+        (?, ?, ?, ?)
+2025-04-05T15:55:00.145+05:30  INFO 5300 --- [crm-system] [http-nio-8095-exec-8] c.demo.crm.service.InteractionService    : Interaction saved successfully with ID: 8
+2025-04-05T15:55:00.145+05:30  INFO 5300 --- [crm-system] [http-nio-8095-exec-8] c.d.c.controller.InteractionController   : Interaction added successfully with ID: 8
+2025-04-05T15:55:00.146+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-05T15:55:00.146+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.demo.crm.model.Interaction@a4fc93e]
+2025-04-05T15:55:00.146+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-04-05T15:55:10.882+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /interactions
+2025-04-05T15:55:10.885+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2025-04-05T15:55:10.889+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        user_role r1_0 
+    join
+        role r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+2025-04-05T15:55:10.891+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-04-05T15:55:10.892+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2025-04-05T15:55:10.892+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /interactions
+2025-04-05T15:55:10.893+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/interactions", parameters={}
+2025-04-05T15:55:10.893+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.InteractionController#addInteraction(Interaction)
+2025-04-05T15:55:10.894+05:30 DEBUG 5300 --- [crm-system] [http-nio-8095-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.demo.crm.model.Interaction@58da567c]

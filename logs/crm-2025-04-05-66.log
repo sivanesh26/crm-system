@@ -1,0 +1,94 @@
+2025-04-05T16:00:14.493+05:30 DEBUG 17848 --- [crm-system] [http-nio-8095-exec-8] o.s.security.web.FilterChainProxy        : Secured DELETE /interactions/11
+2025-04-05T16:00:14.495+05:30 DEBUG 17848 --- [crm-system] [http-nio-8095-exec-8] o.s.web.servlet.DispatcherServlet        : DELETE "/interactions/11", parameters={}
+2025-04-05T16:00:14.496+05:30 DEBUG 17848 --- [crm-system] [http-nio-8095-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.InteractionController#deleteInteraction(Long)
+2025-04-05T16:00:14.497+05:30  WARN 17848 --- [crm-system] [http-nio-8095-exec-8] c.d.c.controller.InteractionController   : Deleting interaction with ID: 11
+2025-04-05T16:00:14.497+05:30  WARN 17848 --- [crm-system] [http-nio-8095-exec-8] c.demo.crm.service.InteractionService    : Deleting interaction with ID: 11
+2025-04-05T16:00:14.501+05:30 DEBUG 17848 --- [crm-system] [http-nio-8095-exec-8] org.hibernate.SQL                        : 
+    select
+        i1_0.id,
+        i1_0.customer_id,
+        c1_0.id,
+        c1_0.address,
+        c1_0.email,
+        c1_0.name,
+        c1_0.phone,
+        i1_0.date,
+        i1_0.details,
+        i1_0.interaction_type 
+    from
+        interactions i1_0 
+    join
+        customer c1_0 
+            on c1_0.id=i1_0.customer_id 
+    where
+        i1_0.id=?
+2025-04-05T16:00:14.505+05:30 DEBUG 17848 --- [crm-system] [http-nio-8095-exec-8] org.hibernate.SQL                        : 
+    delete 
+    from
+        interactions 
+    where
+        id=?
+2025-04-05T16:00:14.514+05:30  INFO 17848 --- [crm-system] [http-nio-8095-exec-8] c.demo.crm.service.InteractionService    : Interaction with ID: 11 deleted successfully
+2025-04-05T16:00:14.514+05:30  INFO 17848 --- [crm-system] [http-nio-8095-exec-8] c.d.c.controller.InteractionController   : Interaction with ID: 11 deleted successfully
+2025-04-05T16:00:14.515+05:30 DEBUG 17848 --- [crm-system] [http-nio-8095-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2025-04-05T16:00:14.515+05:30 DEBUG 17848 --- [crm-system] [http-nio-8095-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Interaction deleted successfully"]
+2025-04-05T16:00:14.516+05:30 DEBUG 17848 --- [crm-system] [http-nio-8095-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-04-05T16:00:54.894+05:30  INFO 17848 --- [crm-system] [RMI TCP Connection(5)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-04-05T16:00:54.909+05:30  INFO 17848 --- [crm-system] [RMI TCP Connection(5)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-05T16:00:54.909+05:30  INFO 17848 --- [crm-system] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-05T16:00:54.925+05:30  INFO 17848 --- [crm-system] [RMI TCP Connection(5)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05T16:00:54.925+05:30  INFO 17848 --- [crm-system] [RMI TCP Connection(5)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-05T16:00:54.925+05:30  INFO 17848 --- [crm-system] [RMI TCP Connection(5)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-05T16:00:59.100+05:30  INFO 14008 --- [crm-system] [main] com.demo.crm.CrmSystemApplication        : Starting CrmSystemApplication using Java 23.0.2 with PID 14008 (C:\Users\Sivanesh.C\eclipse-workspace\crm-system\target\classes started by Sivanesh.C in C:\Users\Sivanesh.C\eclipse-workspace\crm-system)
+2025-04-05T16:00:59.102+05:30 DEBUG 14008 --- [crm-system] [main] com.demo.crm.CrmSystemApplication        : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-05T16:00:59.103+05:30  INFO 14008 --- [crm-system] [main] com.demo.crm.CrmSystemApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-04-05T16:00:59.678+05:30  INFO 14008 --- [crm-system] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-05T16:00:59.739+05:30  INFO 14008 --- [crm-system] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 4 JPA repository interfaces.
+2025-04-05T16:01:00.207+05:30  INFO 14008 --- [crm-system] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8095 (http)
+2025-04-05T16:01:00.218+05:30  INFO 14008 --- [crm-system] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-05T16:01:00.219+05:30  INFO 14008 --- [crm-system] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-05T16:01:00.263+05:30  INFO 14008 --- [crm-system] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-05T16:01:00.263+05:30  INFO 14008 --- [crm-system] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1107 ms
+2025-04-05T16:01:00.383+05:30  INFO 14008 --- [crm-system] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-05T16:01:00.417+05:30  INFO 14008 --- [crm-system] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-04-05T16:01:00.440+05:30  INFO 14008 --- [crm-system] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-05T16:01:00.680+05:30  INFO 14008 --- [crm-system] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-05T16:01:00.703+05:30  INFO 14008 --- [crm-system] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-05T16:01:01.019+05:30  INFO 14008 --- [crm-system] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@131c0b6f
+2025-04-05T16:01:01.021+05:30  INFO 14008 --- [crm-system] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-05T16:01:01.098+05:30  INFO 14008 --- [crm-system] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-05T16:01:01.917+05:30  INFO 14008 --- [crm-system] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-05T16:01:01.957+05:30 DEBUG 14008 --- [crm-system] [main] org.hibernate.SQL                        : 
+    create table interactions (
+        id bigint not null auto_increment,
+        date datetime(6),
+        details varchar(255),
+        interaction_type varchar(255),
+        customer_id bigint not null,
+        primary key (id)
+    ) engine=InnoDB
+2025-04-05T16:01:01.992+05:30 DEBUG 14008 --- [crm-system] [main] org.hibernate.SQL                        : 
+    alter table interactions 
+       add constraint FKi2o8f8udk2ko1bmpwlvejsdhy 
+       foreign key (customer_id) 
+       references customer (id)
+2025-04-05T16:01:02.269+05:30  INFO 14008 --- [crm-system] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05T16:01:02.528+05:30  INFO 14008 --- [crm-system] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-05T16:01:03.398+05:30  INFO 14008 --- [crm-system] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailServiceImpl
+2025-04-05T16:01:03.503+05:30 DEBUG 14008 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
+2025-04-05T16:01:03.568+05:30 DEBUG 14008 --- [crm-system] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-04-05T16:01:03.614+05:30 DEBUG 14008 --- [crm-system] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-04-05T16:01:03.675+05:30 DEBUG 14008 --- [crm-system] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-04-05T16:01:03.718+05:30 DEBUG 14008 --- [crm-system] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-04-05T16:01:03.823+05:30  INFO 14008 --- [crm-system] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8095 (http) with context path '/'
+2025-04-05T16:01:03.829+05:30  INFO 14008 --- [crm-system] [main] com.demo.crm.CrmSystemApplication        : Started CrmSystemApplication in 5.229 seconds (process running for 5.78)
+2025-04-05T16:01:35.199+05:30  INFO 14008 --- [crm-system] [http-nio-8095-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-05T16:01:35.200+05:30  INFO 14008 --- [crm-system] [http-nio-8095-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-05T16:01:35.201+05:30 DEBUG 14008 --- [crm-system] [http-nio-8095-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver

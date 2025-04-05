@@ -1,0 +1,134 @@
+2025-04-04T11:06:17.544+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2025-04-04T11:06:17.544+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["A runtime error occurred. Please contact support."]
+2025-04-04T11:06:17.559+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [Cannot add or update a child row: a foreign key constraint fails (`crm_system`.`interactions`, CONSTRAINT `FKi2o8f8udk2ko1bmpwlvejsdhy` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`id`))] [insert into interactions (customer_id,date,details,interaction_type) values (?,?,?,?)]; SQL [insert into interactions (customer_id,date,details,interaction_type) values (?,?,?,?)]; constraint [null]]
+2025-04-04T11:06:17.559+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2025-04-04T11:06:25.349+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /interactions
+2025-04-04T11:06:25.360+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-2] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2025-04-04T11:06:25.365+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-2] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        user_role r1_0 
+    join
+        role r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+2025-04-04T11:06:25.365+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-2] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-04-04T11:06:25.365+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-2] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2025-04-04T11:06:25.365+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /interactions
+2025-04-04T11:06:25.365+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/interactions", parameters={}
+2025-04-04T11:06:25.365+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.InteractionController#getAllInteractions()
+2025-04-04T11:06:25.374+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-2] org.hibernate.SQL                        : 
+    select
+        i1_0.id,
+        i1_0.customer_id,
+        i1_0.date,
+        i1_0.details,
+        i1_0.interaction_type 
+    from
+        interactions i1_0
+2025-04-04T11:06:25.379+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-04T11:06:25.379+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[]]
+2025-04-04T11:06:25.381+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-04-04T11:07:18.910+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /interactions
+2025-04-04T11:07:18.910+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-1] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2025-04-04T11:07:18.918+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-1] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        user_role r1_0 
+    join
+        role r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+2025-04-04T11:07:18.918+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-1] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-04-04T11:07:18.924+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-1] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2025-04-04T11:07:18.924+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /interactions
+2025-04-04T11:07:18.924+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/interactions", parameters={}
+2025-04-04T11:07:18.924+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.InteractionController#getAllInteractions()
+2025-04-04T11:07:18.930+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-1] org.hibernate.SQL                        : 
+    select
+        i1_0.id,
+        i1_0.customer_id,
+        i1_0.date,
+        i1_0.details,
+        i1_0.interaction_type 
+    from
+        interactions i1_0
+2025-04-04T11:07:18.934+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-04T11:07:18.934+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[]]
+2025-04-04T11:07:18.934+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-04-04T11:07:23.612+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /interactions
+2025-04-04T11:07:23.614+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-3] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2025-04-04T11:07:23.620+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-3] org.hibernate.SQL                        : 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        user_role r1_0 
+    join
+        role r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+2025-04-04T11:07:23.620+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-3] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-04-04T11:07:23.620+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-3] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2025-04-04T11:07:23.620+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /interactions
+2025-04-04T11:07:23.620+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/interactions", parameters={}
+2025-04-04T11:07:23.620+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.demo.crm.controller.InteractionController#addInteraction(Interaction)
+2025-04-04T11:07:23.620+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.demo.crm.model.Interaction@2c3097e]
+2025-04-04T11:07:23.628+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-3] org.hibernate.SQL                        : 
+    insert 
+    into
+        interactions
+        (customer_id, date, details, interaction_type) 
+    values
+        (?, ?, ?, ?)
+2025-04-04T11:07:23.669+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-04-04T11:07:23.669+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.demo.crm.model.Interaction@2c3097e]
+2025-04-04T11:07:23.685+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-04-04T11:07:39.086+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /interactions
+2025-04-04T11:07:39.087+05:30 DEBUG 9564 --- [crm-system] [http-nio-8095-exec-5] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
